@@ -1,0 +1,7 @@
+# 문자 수신 단말기 제작
+
+내장 imagegen으로 넓은 문자 화면과 세 개의 키가 있는 단말기를 생성하고 assets/message-terminal.webp에 RGBA WebP로 통합함. 화면 내용과 버튼 이름은 이미지에 굽지 않고 코드로 표시함. 기기 외곽을 자르지 않고 전체 비율을 유지함. 사건 기록은 기본 메뉴에만 남김.
+
+## 생성 프롬프트
+
+Use case: product-mockup. Asset type: game interface background plate, exactly frontal portable TEXT MESSAGE RECEIVER, no antenna and no walkie talkie parts. Portrait 4:5 composition, the COMPLETE wide rectangular device including all four rounded corners inside the canvas with 4% breathing room, transparent background. A compact thick field data terminal with weathered dark blue-grey painted steel and rubber corners, four small screws, small amber indicator at upper right. One very LARGE absolutely blank deep green flat LCD window occupying x10% to90% and y11% to73%, straight aligned rectangular screen, NO text or symbols inside because live accessible text will be overlaid by code. Along the bottom three equal wide tactile rectangular keys with blank unlettered dark brass keycaps, each centered at x23%,50%,77%, from y80% to92%. NO knob, NO antenna, NO microphone, NO speaker grille, NO side handles, NO additional controls, NO labels, NO logo, NO letters, NO watermark. Detailed realistic painterly game prop, consistent subtle aged materials for Korean coastal horror, practical readable silhouette, restrained edge lighting, no dramatic black background, no human hands, no scenery. All device edges must be fully visible.

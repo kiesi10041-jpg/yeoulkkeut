@@ -120,6 +120,11 @@
     "sha256": "b4fb41b7f3aa29040c03f834a0bea1ce19c58c2928f7cb913e79a069f4abd5db"
   },
   {
+    "path": "assets/message-terminal.webp",
+    "bytes": 184206,
+    "sha256": "e055d04f2ce3c71bf70f8776629c01ad567746cac0dfd3ff80fd7a7d2dc3b837"
+  },
+  {
     "path": "assets/nara-scene.webp",
     "bytes": 124972,
     "sha256": "93c78f8f3db0455abff7440b995f46a55fe26aa4aeb2cac4f8eba268b57617e3"

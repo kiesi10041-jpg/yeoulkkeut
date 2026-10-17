@@ -222,7 +222,7 @@ N.door.checkpoint=true;
 N.relayDesk.revisitLines=[s('','작업대에 요청 원본과 출력 기록을 펼쳐 두었다. 이미 읽은 묶음을 다시 길게 읽지 않고, 아직 확인하지 않은 기록을 고를 수 있다.')];
 N.manifestDesk.revisitLines=[s('','작성한 표를 옆에 놓는다. 아직 남은 항목을 확인하거나, 둘 다 확인했다면 함께 제출할 수 있다.')];
 for(const id of ['pier','boarding','cabinet','silence','source'])delete N[id];
-D.build='6.4.0';root.YKData=D;if(typeof module!=='undefined')module.exports=D;
+D.build='6.5.0';root.YKData=D;if(typeof module!=='undefined')module.exports=D;
 
 N.storeLevel.art='flood-rescue.webp';N.storeLevel.focal='70% center';
 for(const id of ['marketNarrow','marketTrap','marketCross'])N[id].art='market-crossing.webp';
