@@ -1,26 +1,26 @@
 [
   {
     "file": "assets/audio/coast.mp3",
-    "seconds": 32.0,
-    "peak": 0.4023934006690979,
+    "seconds": 96.0,
+    "peak": 0.45570993423461914,
     "clipping": false
   },
   {
     "file": "assets/audio/room.mp3",
-    "seconds": 32.0,
+    "seconds": 96.0,
     "peak": 0.32561275362968445,
     "clipping": false
   },
   {
     "file": "assets/audio/signal.mp3",
-    "seconds": 32.0,
-    "peak": 0.3127613961696625,
+    "seconds": 96.0,
+    "peak": 0.3047565817832947,
     "clipping": false
   },
   {
     "file": "assets/audio/threat.mp3",
-    "seconds": 32.0,
-    "peak": 0.332721084356308,
+    "seconds": 96.0,
+    "peak": 0.37884145975112915,
     "clipping": false
   }
 ]

@@ -1,28 +1,53 @@
 [
   {
+    "path": "assets/archive.webp",
+    "bytes": 178596,
+    "sha256": "5a379592c8073a71d4038a5ee657a26f2d62756d058dfaf92e91a0a37fe06c30"
+  },
+  {
     "path": "assets/audio/coast.mp3",
-    "bytes": 320925,
-    "sha256": "73dbee2587eace7b136f8871ef957bfbfe0f73e4fefe079f9eb4e568a524b826"
+    "bytes": 960765,
+    "sha256": "13d19561fc66418d9625155369325aea23df638d58fd58d45bd1ef5135f4eb9f"
   },
   {
     "path": "assets/audio/room.mp3",
-    "bytes": 320925,
-    "sha256": "dc1678d5ebc89dca440d2d64e62bd86d13838689312b8a71ea45fa03ec229d55"
+    "bytes": 960765,
+    "sha256": "e6af056dd870f19858459f99bd3adcf560002d5474c551a563539a14581c20e1"
   },
   {
     "path": "assets/audio/signal.mp3",
-    "bytes": 320925,
-    "sha256": "2680a1972f721da9459da32ce4859ddc78b647d413d4592f341806bbd5475936"
+    "bytes": 960765,
+    "sha256": "c3426fbb12b44a088c6afac81b5f125d1ef9e99f7d50eaa30d9473ed41c71cac"
   },
   {
     "path": "assets/audio/threat.mp3",
-    "bytes": 320925,
-    "sha256": "db73c66eb753185c5ae66e931125c25e3a7af4758b09c41d1ed12cf11eb50d2f"
+    "bytes": 960765,
+    "sha256": "35213647933c25a4dad66279149ec077dcadc6fd13de038df652ff99eaec2358"
+  },
+  {
+    "path": "assets/clinic.webp",
+    "bytes": 175522,
+    "sha256": "a71f8347488fe7f54880965c2e210a82f83c62f2e0c8bab466792ae064849f3a"
+  },
+  {
+    "path": "assets/doyun.webp",
+    "bytes": 91688,
+    "sha256": "9e5935045ec2ff9b97db7d29873522aa16999b0664ce51fc3a5d9fdbc27608fe"
+  },
+  {
+    "path": "assets/ending-caught.webp",
+    "bytes": 214862,
+    "sha256": "be935fb4e333114b374f5abe56682cbd9d8ba0c712619a7b53eeee9738132d1b"
   },
   {
     "path": "assets/ending-forest.webp",
     "bytes": 374532,
     "sha256": "fece2f279c1604f92d50070d08793058026c88b87fead1e43a41602687f42246"
+  },
+  {
+    "path": "assets/ending-market.webp",
+    "bytes": 293378,
+    "sha256": "cbe80feb634844c33cdd28ed5dad72ac2ab824447857be5166e0b2a94bbf61f9"
   },
   {
     "path": "assets/ending-outbreak.webp",
@@ -40,6 +65,11 @@
     "sha256": "7ce31768521634d93e908ee2eb99b2a5d1b4d77da2c899e312e0408479f2c5b5"
   },
   {
+    "path": "assets/ending-school.webp",
+    "bytes": 255338,
+    "sha256": "8f2f36cbc0b7b854288a43c883332532ad6b63158faed29249a33af5e7459f1e"
+  },
+  {
     "path": "assets/ending-sea.webp",
     "bytes": 260368,
     "sha256": "917c253d77862d034e243a749f37663bcd0c385ce6fbe672847b8ae114472643"
@@ -48,6 +78,21 @@
     "path": "assets/ending-shadow.webp",
     "bytes": 214862,
     "sha256": "be935fb4e333114b374f5abe56682cbd9d8ba0c712619a7b53eeee9738132d1b"
+  },
+  {
+    "path": "assets/ending-together.webp",
+    "bytes": 299122,
+    "sha256": "f25e3ad7f3c404d3b5a19e3d4515927fc7ef81b3c1c4fce8c092eac949cd0af9"
+  },
+  {
+    "path": "assets/ending-water.webp",
+    "bytes": 327314,
+    "sha256": "1c465dd67532a3bce78f997fcc4a99aa140b653e4e36b36779d3c1d66facd19a"
+  },
+  {
+    "path": "assets/haewon.webp",
+    "bytes": 145088,
+    "sha256": "66884446a927edc91adfbccba470e22116b564aa4dbcca2c1726893909c26097"
   },
   {
     "path": "assets/hall.webp",
@@ -60,6 +105,11 @@
     "sha256": "8c0b4360424119e742df0310cfc54aec880e409082f0311a63df66f84c8b0206"
   },
   {
+    "path": "assets/market.webp",
+    "bytes": 290202,
+    "sha256": "b4fb41b7f3aa29040c03f834a0bea1ce19c58c2928f7cb913e79a069f4abd5db"
+  },
+  {
     "path": "assets/nara-scene.webp",
     "bytes": 124972,
     "sha256": "93c78f8f3db0455abff7440b995f46a55fe26aa4aeb2cac4f8eba268b57617e3"
@@ -68,6 +118,11 @@
     "path": "assets/nara.webp",
     "bytes": 119630,
     "sha256": "959a1bb807e577a872fe30542f308a81a626912b6829d85ef275f6eaf59fe2c5"
+  },
+  {
+    "path": "assets/operator.webp",
+    "bytes": 143574,
+    "sha256": "239bece278cdb48998453f1e839c88c0cf377b0066675954066241f8a8d1c1ff"
   },
   {
     "path": "assets/pier.webp",
@@ -80,9 +135,39 @@
     "sha256": "b965cefabfdb5601e85b4b1f03cb2f62f2f2ebde0d0f44b510d3272a01cb7fb3"
   },
   {
+    "path": "assets/reservoir.webp",
+    "bytes": 256556,
+    "sha256": "c8c5579051ca41f582552e7a6f6ca1b8d0e6afaccd2f80cc0123f130257eee7f"
+  },
+  {
+    "path": "assets/school-creature.webp",
+    "bytes": 294438,
+    "sha256": "47e741f9af5ac1fbe563d6222975d26f5df7696f6b77fdc1af83b54d9d4e7847"
+  },
+  {
+    "path": "assets/school.webp",
+    "bytes": 233292,
+    "sha256": "33b8a12be64f5935edeebc45cf9463759f48330b8ab856ec2cce6cd23778300d"
+  },
+  {
+    "path": "assets/seojin.webp",
+    "bytes": 103010,
+    "sha256": "babfb4bb25455b173c32efbb13cd921e072f66b668c0efaedb165938c848dde1"
+  },
+  {
+    "path": "assets/station.webp",
+    "bytes": 245458,
+    "sha256": "03333e7d740685e76d49212ebcf9be9777a31158e6d53959b8284062e4b7f8c2"
+  },
+  {
     "path": "assets/substation.webp",
     "bytes": 229328,
     "sha256": "4da96c56551f8254c7794c768be9a0f023d4624ca26d27435c5038d05e698411"
+  },
+  {
+    "path": "assets/suho.webp",
+    "bytes": 184752,
+    "sha256": "10c5f27aeb024bf83ea37841a7f8debc729da685dc583da19b4b72cbe10473fa"
   },
   {
     "path": "assets/title.webp",

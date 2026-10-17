@@ -1,7 +1,7 @@
 import numpy as np, subprocess, wave
 from pathlib import Path
 r=Path(__file__).resolve().parent;a=r/'assets/audio';a.mkdir(exist_ok=True)
-sr=24000;duration=32;t=np.arange(sr*duration)/sr;rng=np.random.default_rng(417)
+sr=24000;duration=96;t=np.arange(sr*duration)/sr;rng=np.random.default_rng(417)
 # Authored procedural cues, no sampled recordings or voices.
 for name in ['room','coast','signal','threat']:
  noise=rng.normal(0,1,len(t));smooth=np.convolve(noise,np.ones(300)/300,mode='same');smooth/=max(abs(smooth));x=np.zeros_like(t)
@@ -17,6 +17,7 @@ for name in ['room','coast','signal','threat']:
  else:
   x=.032*smooth+.025*np.sin(2*np.pi*46.25*t)*(.5+.5*np.sin(2*np.pi*t/4))
   notes=[(2,138.59),(11,146.83),(20,138.59),(27,130.81)]
+ notes=[(start+offset, freq*ratio) for offset,ratio in [(0,1),(32,.9438743),(64,1.0594631)] for start,freq in notes]
  for start,f in notes:
   dt=t-start;valid=(dt>=0)&(dt<5);env=np.zeros_like(t);env[valid]=(1-np.exp(-dt[valid]*5))*np.exp(-dt[valid]/1.6)
   x+=.035*env*(np.sin(2*np.pi*f*dt)+.2*np.sin(2*np.pi*f*2.006*dt))
