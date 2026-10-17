@@ -1,0 +1,22 @@
+{
+  "passed": 17,
+  "checks": [
+    "all story links, knowledge gates and images resolve",
+    "first run begins without erosion or previous-life flags",
+    "choices cannot skip unread dialogue",
+    "door creature responds to name; number passes consistently",
+    "shelter ending and knowledge unlock follow actual event",
+    "unseen date question is absent on first run",
+    "abandoning companion and unscreened boarding have distinct consequences",
+    "noticed symptoms can lead to recovery without prior ending",
+    "source route requires learned location; final recording requires number knowledge",
+    "all six endings are reachable through actions with persistent knowledge",
+    "question consumes erosion once and rejects duplicate submission",
+    "previous broadcast is paid once, never changed by replay",
+    "reading changes no erosion, flags or choices and uses no randomness",
+    "save round-trip preserves page, costs and knowledge",
+    "malformed or old saves are rejected before replacement",
+    "ending cannot be modified by later actions or questions",
+    "all state combinations have at most three visible actions"
+  ]
+}

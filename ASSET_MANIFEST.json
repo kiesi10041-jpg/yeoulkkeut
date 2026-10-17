@@ -1,0 +1,97 @@
+[
+  {
+    "path": "assets/audio/coast.mp3",
+    "bytes": 320925,
+    "sha256": "73dbee2587eace7b136f8871ef957bfbfe0f73e4fefe079f9eb4e568a524b826"
+  },
+  {
+    "path": "assets/audio/room.mp3",
+    "bytes": 320925,
+    "sha256": "dc1678d5ebc89dca440d2d64e62bd86d13838689312b8a71ea45fa03ec229d55"
+  },
+  {
+    "path": "assets/audio/signal.mp3",
+    "bytes": 320925,
+    "sha256": "2680a1972f721da9459da32ce4859ddc78b647d413d4592f341806bbd5475936"
+  },
+  {
+    "path": "assets/audio/threat.mp3",
+    "bytes": 320925,
+    "sha256": "db73c66eb753185c5ae66e931125c25e3a7af4758b09c41d1ed12cf11eb50d2f"
+  },
+  {
+    "path": "assets/ending-forest.webp",
+    "bytes": 374532,
+    "sha256": "fece2f279c1604f92d50070d08793058026c88b87fead1e43a41602687f42246"
+  },
+  {
+    "path": "assets/ending-outbreak.webp",
+    "bytes": 291392,
+    "sha256": "c649d315f208ed77b2a2df58940f5c57e279430174192f8792ca97d0397f3dbc"
+  },
+  {
+    "path": "assets/ending-refuge.webp",
+    "bytes": 235174,
+    "sha256": "52254ee2c9d033d056ec3cbe1e3ebefca9e1f1165dae985b8655f01edd4bffba"
+  },
+  {
+    "path": "assets/ending-relay.webp",
+    "bytes": 337882,
+    "sha256": "7ce31768521634d93e908ee2eb99b2a5d1b4d77da2c899e312e0408479f2c5b5"
+  },
+  {
+    "path": "assets/ending-sea.webp",
+    "bytes": 260368,
+    "sha256": "917c253d77862d034e243a749f37663bcd0c385ce6fbe672847b8ae114472643"
+  },
+  {
+    "path": "assets/ending-shadow.webp",
+    "bytes": 214862,
+    "sha256": "be935fb4e333114b374f5abe56682cbd9d8ba0c712619a7b53eeee9738132d1b"
+  },
+  {
+    "path": "assets/hall.webp",
+    "bytes": 130406,
+    "sha256": "fc002d7ef33e6f5cde18883865ec8563de7803ff2ceb460d5c5b48ad9509bafb"
+  },
+  {
+    "path": "assets/hand.webp",
+    "bytes": 186006,
+    "sha256": "8c0b4360424119e742df0310cfc54aec880e409082f0311a63df66f84c8b0206"
+  },
+  {
+    "path": "assets/nara-scene.webp",
+    "bytes": 124972,
+    "sha256": "93c78f8f3db0455abff7440b995f46a55fe26aa4aeb2cac4f8eba268b57617e3"
+  },
+  {
+    "path": "assets/nara.webp",
+    "bytes": 119630,
+    "sha256": "959a1bb807e577a872fe30542f308a81a626912b6829d85ef275f6eaf59fe2c5"
+  },
+  {
+    "path": "assets/pier.webp",
+    "bytes": 166010,
+    "sha256": "1f5554d8593dbf176a249afc91cb13dd8c5d6c97eb30fe34752236f7978395ed"
+  },
+  {
+    "path": "assets/relay.webp",
+    "bytes": 253416,
+    "sha256": "b965cefabfdb5601e85b4b1f03cb2f62f2f2ebde0d0f44b510d3272a01cb7fb3"
+  },
+  {
+    "path": "assets/substation.webp",
+    "bytes": 229328,
+    "sha256": "4da96c56551f8254c7794c768be9a0f023d4624ca26d27435c5038d05e698411"
+  },
+  {
+    "path": "assets/title.webp",
+    "bytes": 198564,
+    "sha256": "8c23ed040aedf5243632046a6f00da0c42deea080c29a02ccad8a87d338e0f0c"
+  },
+  {
+    "path": "assets/town.webp",
+    "bytes": 237318,
+    "sha256": "cf19fe5fcaa19b647fc4386be563d7b224054ec7ca9368a1d2399363aa0b91e6"
+  }
+]

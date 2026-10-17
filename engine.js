@@ -1,0 +1,16 @@
+(function(root){
+const D=root.YKData||(typeof require==='function'?require('./story.js'):null);
+const emptyMeta=()=>({version:6,ends:[],knowledge:[],seen:[],preferences:{sound:false,music:45,effects:55,reduce:false,large:false}});
+const fresh=()=>({version:6,node:'arrival',page:0,erosion:0,flags:[],asked:[],chat:[],trail:[],ending:null});
+const clone=x=>JSON.parse(JSON.stringify(x));
+function validateRun(r){if(!r||r.version!==6||!D.nodes[r.node]||!Number.isInteger(r.page)||r.page<0||r.page>=D.nodes[r.node].lines.length||!Number.isFinite(r.erosion)||r.erosion<0||r.erosion>100||!Array.isArray(r.flags)||!Array.isArray(r.asked)||!Array.isArray(r.chat)||!Array.isArray(r.trail)||r.ending&&!D.endings[r.ending])throw Error('진행 기록의 형식이 맞지 않습니다.');for(const key of ['flags','asked'])if(!r[key].every(v=>typeof v==='string'))throw Error('진행 기록의 항목이 잘못되었습니다.');if(!r.chat.every(c=>c&&typeof c.q==='string'&&typeof c.a==='string'&&D.nodes[c.node]))throw Error('교신 기록의 형식이 맞지 않습니다.');return r;}
+function validateMeta(m){if(!m||m.version!==6||!Array.isArray(m.ends)||!Array.isArray(m.knowledge)||!Array.isArray(m.seen)||!m.preferences)throw Error('기록 형식이 맞지 않습니다.');m.ends=m.ends.filter(x=>D.endings[x]);m.knowledge=m.knowledge.filter(x=>D.knowledge[x]);m.seen=m.seen.filter(x=>D.nodes[x]);m.preferences={...emptyMeta().preferences,...m.preferences};for(const k of ['sound','reduce','large'])m.preferences[k]=m.preferences[k]===true;for(const k of ['music','effects'])m.preferences[k]=Math.max(0,Math.min(100,Number(m.preferences[k])||0));return m;}
+function available(r,m){if(r.ending)return [];return D.nodes[r.node].choices.filter(c=>(!c.requires||m.knowledge.includes(c.requires))&&(!c.flag||r.flags.includes(c.flag))&&(!c.unless||!r.flags.includes(c.unless)));}
+function choose(r,m,id){const c=available(r,m).find(c=>c.id===id);if(!c||r.page<D.nodes[r.node].lines.length-1)return false;r.trail.push({node:r.node,id});r.trail=r.trail.slice(-100);for(const f of c.flags||[])if(!r.flags.includes(f))r.flags.push(f);r.erosion=Math.max(0,Math.min(100,r.erosion+(c.erosion||0)));if(!m.seen.includes(r.node))m.seen.push(r.node);
+ if(c.to.startsWith('end:')){const id=c.to.slice(4),e=D.endings[id];r.ending=id;if(!m.ends.includes(id))m.ends.push(id);if(e.knowledge&&!m.knowledge.includes(e.knowledge))m.knowledge.push(e.knowledge);}else{r.node=c.to;r.page=0;}
+ return true;}
+function next(r,m){if(r.ending)return false;const last=D.nodes[r.node].lines.length-1;if(r.page<last){r.page++;if(r.page===last&&!m.seen.includes(r.node))m.seen.push(r.node);return true;}return false;}
+function replay(r){const n=D.nodes[r.node];if(r.ending||!n.previous)return false;const key='replay:'+r.node;if(r.asked.includes(key))return false;r.asked.push(key);r.erosion=Math.min(100,r.erosion+12);return true;}
+function ask(r,m,id){if(r.ending)return false;const n=D.nodes[r.node],key=r.node+':'+id,q=(n.questions||[]).find(q=>q.id===id);if(!q||r.asked.includes(key))return false;r.asked.push(key);r.erosion=Math.min(100,r.erosion+q.cost);r.chat.push({q:q.q,a:q.a,node:r.node,cost:q.cost});return true;}
+const api={D,emptyMeta,fresh,validateRun,validateMeta,available,choose,next,ask,replay,clone};root.YK=api;if(typeof module!=='undefined')module.exports=api;
+})(globalThis);

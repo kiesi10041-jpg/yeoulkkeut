@@ -1,0 +1,26 @@
+[
+  {
+    "file": "assets/audio/coast.mp3",
+    "seconds": 32.0,
+    "peak": 0.4023934006690979,
+    "clipping": false
+  },
+  {
+    "file": "assets/audio/room.mp3",
+    "seconds": 32.0,
+    "peak": 0.32561275362968445,
+    "clipping": false
+  },
+  {
+    "file": "assets/audio/signal.mp3",
+    "seconds": 32.0,
+    "peak": 0.3127613961696625,
+    "clipping": false
+  },
+  {
+    "file": "assets/audio/threat.mp3",
+    "seconds": 32.0,
+    "peak": 0.332721084356308,
+    "clipping": false
+  }
+]
