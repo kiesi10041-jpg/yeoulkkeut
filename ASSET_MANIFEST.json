@@ -90,6 +90,11 @@
     "sha256": "1c465dd67532a3bce78f997fcc4a99aa140b653e4e36b36779d3c1d66facd19a"
   },
   {
+    "path": "assets/flood-rescue.webp",
+    "bytes": 130776,
+    "sha256": "01f99bebe80847389da4c3299e2581bd968c43f1ff23952bc9fcb3b1e9f56836"
+  },
+  {
     "path": "assets/haewon.webp",
     "bytes": 145088,
     "sha256": "66884446a927edc91adfbccba470e22116b564aa4dbcca2c1726893909c26097"
@@ -103,6 +108,11 @@
     "path": "assets/hand.webp",
     "bytes": 186006,
     "sha256": "8c0b4360424119e742df0310cfc54aec880e409082f0311a63df66f84c8b0206"
+  },
+  {
+    "path": "assets/market-crossing.webp",
+    "bytes": 283424,
+    "sha256": "d7b13494ff5d5dab71b7ee1c867f048581d084e3d70dcfa6b5e453b44954e56d"
   },
   {
     "path": "assets/market.webp",
@@ -123,6 +133,11 @@
     "path": "assets/operator.webp",
     "bytes": 143574,
     "sha256": "239bece278cdb48998453f1e839c88c0cf377b0066675954066241f8a8d1c1ff"
+  },
+  {
+    "path": "assets/pier-rest.webp",
+    "bytes": 173566,
+    "sha256": "bcb7742c8ccdbf7551fd091656df8e5fc3bc8c2a97cb01be9ff7b448094fcf92"
   },
   {
     "path": "assets/pier.webp",
