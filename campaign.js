@@ -174,9 +174,9 @@ for(const n of Object.values(N)){n.place=n.place.replaceAll('여울끝','해솔�
 
 N.classroomHall.choices.find(x=>x.id==='hinge').to='schoolPatrol';
 scene('schoolPatrol','학교 · 출석을 확인하는 것','school.webp','approach',[
-s('','양호실로 향하는 문 앞에서 금속 긁는 소리가 난다. 교실 안의 의자가 움직인 것이 아니다. 길쭉한 형체가 복도 끝에서 출입 명부를 들고 다가온다. 얼굴이어야 할 자리에 작은 종이 매달려 있다. 걸을 때마다 같은 간격으로 부딪힌다.'),s('','서진이 해원의 이름을 말하려다가 종소리를 듣고 멈춘다. 형체는 너희가 서 있는 위치가 아니라 입이 움직인 사람 쪽으로 고개를 돌린다. 네가 발을 한 걸음 뒤로 빼도 다가오지 않는다. 소리를 낼 때만 종이 흔들린다.'),s('나래','현관에 뭐라고 적혀 있었죠. 이름 부르지 말라고 했어요.'),s('교내 방송','출석을 확인합니다. 결석한 사람의 이름을 말씀하십시오.'),s('','네 앞에는 학교 현관에서 복사한 세 번호와 안쪽 문들의 출석 인원이 있다. 방송은 이름을 요구하지만 벽의 안내는 이름을 부르지 말라고 한다. 숫자만 안다고 사람을 찾을 수 없었던 것처럼, 지금은 이름을 안다고 말해야 하는 것도 아니다. 양호실 문틈에서 작은 종이가 나온다. “말하지 말고 보여 주세요.”'),s('','형체가 네 쪽으로 종을 기울인다. 아래쪽 종이에서 구멍 셋이 보인다. 문틈의 손이 네 번호표를 한 번 가리키고 사라진다. 나래가 입을 막은 채 네 소매를 붙잡는다. 종이 한 장을 펼칠 틈은 있다.')],[c('show','말하지 않고 출입 때 적은 번호를 보여 준다','schoolPass',{flags:['patrolPassed']}),c('name','찾는 사람의 이름을 말한다','end:attendance'),c('hide','입을 다물고 문 옆으로 물러선다','schoolHold')],{creature:'school-creature.webp'});
+s('','양호실로 향하는 문 앞에서 금속 긁는 소리가 난다. 교실 안의 의자가 움직인 것이 아니다. 길쭉한 형체가 복도 끝에서 출입 명부를 들고 다가온다. 얼굴이어야 할 자리에 작은 종이 매달려 있다. 걸을 때마다 같은 간격으로 부딪힌다.'),s('','서진이 해원의 이름을 말하려다가 종소리를 듣고 멈춘다. 형체는 너희가 서 있는 위치가 아니라 입이 움직인 사람 쪽으로 고개를 돌린다. 네가 발을 한 걸음 뒤로 빼도 다가오지 않는다. 소리를 낼 때만 종이 흔들린다.'),s('나래','현관에 뭐라고 적혀 있었죠. 이름 부르지 말라고 했어요.'),s('교내 방송','출석을 확인합니다. 결석한 사람의 이름을 말씀하십시오.'),s('','네 앞에는 학교 현관에서 복사한 세 번호와 안쪽 문들의 출석 인원이 있다. 방송은 이름을 요구하지만 벽의 안내는 이름을 부르지 말라고 한다. 숫자만 안다고 사람을 찾을 수 없었던 것처럼, 지금은 이름을 안다고 말해야 하는 것도 아니다. 양호실 문틈에서 작은 종이가 나온다. “말하지 말고 보여 주세요.”'),s('','형체가 네 쪽으로 종을 기울인다. 아래쪽 종이에서 구멍 셋이 보인다. 문틈의 손이 네 번호표를 한 번 가리키고 사라진다. 나래가 입을 막은 채 네 소매를 붙잡는다. 종이 한 장을 펼칠 틈은 있다.')],[c('show','말하지 않고 출입 때 적은 번호를 보여 준다','schoolPass',{flags:['patrolPassed']}),c('name','찾는 사람의 이름을 말한다','end:attendance'),c('hide','입을 다물고 문 옆으로 물러선다','schoolHold')],{creature:'school-warden.webp'});
 scene('schoolHold','학교 · 문 옆의 빈자리','school.webp','approach',[
-s('','너희는 문 옆으로 몸을 옮긴다. 형체는 달려들지 않지만 너희와 양호실 사이에 선다. 가만히 있는 것만으로는 누군가를 꺼낼 길이 열리지 않는다. 교내 방송은 같은 질문을 반복한다. 결석한 사람의 이름을 말하라고.'),s('','도윤의 손이 문 아래 틈으로 나온다. 손가락으로 종이 숫자 셋을 두드리고, 다시 문 아래로 들어간다. 형체의 종은 그 작은 두드림에도 고개를 돌리지만 다른 사람 이름은 부르지 않는다. 지금 확인하려는 것은 들어온 기록인 듯하다.'),s('서진','번호표를…… 보여만 주면 될까요?'),s('','서진이 속삭이자 형체가 그녀 쪽으로 움직인다. 너는 대답 대신 출입 명부 사본을 들어 올린다. 일부러 큰 소리를 내지 않고도 눈앞의 기록을 보일 수 있다. 나래가 서진 옆에서 손바닥을 펴 조용히 기다리자는 신호를 한다.')],[c('show','세 번호가 적힌 종이를 펼쳐 보인다','schoolPass',{flags:['patrolPassed']})],{creature:'school-creature.webp'});
+s('','너희는 문 옆으로 몸을 옮긴다. 형체는 달려들지 않지만 너희와 양호실 사이에 선다. 가만히 있는 것만으로는 누군가를 꺼낼 길이 열리지 않는다. 교내 방송은 같은 질문을 반복한다. 결석한 사람의 이름을 말하라고.'),s('','도윤의 손이 문 아래 틈으로 나온다. 손가락으로 종이 숫자 셋을 두드리고, 다시 문 아래로 들어간다. 형체의 종은 그 작은 두드림에도 고개를 돌리지만 다른 사람 이름은 부르지 않는다. 지금 확인하려는 것은 들어온 기록인 듯하다.'),s('서진','번호표를…… 보여만 주면 될까요?'),s('','서진이 속삭이자 형체가 그녀 쪽으로 움직인다. 너는 대답 대신 출입 명부 사본을 들어 올린다. 일부러 큰 소리를 내지 않고도 눈앞의 기록을 보일 수 있다. 나래가 서진 옆에서 손바닥을 펴 조용히 기다리자는 신호를 한다.')],[c('show','세 번호가 적힌 종이를 펼쳐 보인다','schoolPass',{flags:['patrolPassed']})],{creature:'school-warden.webp'});
 scene('schoolPass','학교 · 지나간 종소리','school.webp','quiet',[
 s('','형체는 종이 끝을 잡지 않는다. 얼굴 아래 매달린 종이 한 번 울리고, 네가 보여 준 숫자 옆에 작은 구멍이 생긴다. 학교 출입 명부의 번호와 같은 위치다. 형체는 문을 통과해 교실 안쪽으로 들어간다. 문은 열리지 않았는데 종소리만 반대편에서 이어진다.'),s('나래','갔어요. 지금 문 열어요.'),s('서진','동생 이름을 말했으면 어떻게 됐을까요?'),s('나','모르겠어요. 그런데 숫자를 봤고, 길은 열렸어요. 지금 아는 건 거기까지예요.'),s('','양호실 문 아래의 손이 다시 나타난다. 가까이서 보니 붕대를 감은 왼손이다. 안쪽 목소리는 네가 보여 준 종이의 끝이 젖었다고 말한다. 실제로 문밖에 내민 종이를 보고 반응하고 있다. 한 박자 늦게 같은 말을 반복하던 교실의 소리와는 다른 근거가 생긴다.'),s('','양호실 문 바로 앞에서 너희가 멈춘다. 안쪽 남자가 끌려 나온 종이 끝을 들어 보인다. 새로 생긴 구멍 세 개. 서진이 자기 손에도 같은 구멍이 없는지 내려다본다. 나래는 돌아보지 말라고 손짓하고, 너는 문에 귀를 댄다.')],[c('door','양호실 문틈을 확인한다','doyunDoor')]);
 E.attendance={title:'불린 자리에 남은 것',art:'ending-school.webp',kind:'setback',text:['네가 이름을 말하자 복도 스피커가 그 이름을 받아 읽는다. 서진이 네 팔을 잡고 입을 막으려 하지만 문장 끝이 먼저 방송된다. 명부에서 한 줄이 늘어난다.','종이 울리자 교실 문이 열린다. 안쪽 의자 하나가 네 쪽으로 돌아선다. 이름을 알려 주면 사람을 찾을 수 있을 거라고 생각했던 행동이, 누군가 앉을 자리를 만드는 접수가 됐다.'],knowledge:'number',lead:'학교 현관부터 다시 선택할 수 있다. 들어온 기록을 보여 주는 행동과 결석한 사람의 이름을 말하는 행동은 달랐다.'};
@@ -222,9 +222,23 @@ N.door.checkpoint=true;
 N.relayDesk.revisitLines=[s('','작업대에 요청 원본과 출력 기록을 펼쳐 두었다. 이미 읽은 묶음을 다시 길게 읽지 않고, 아직 확인하지 않은 기록을 고를 수 있다.')];
 N.manifestDesk.revisitLines=[s('','작성한 표를 옆에 놓는다. 아직 남은 항목을 확인하거나, 둘 다 확인했다면 함께 제출할 수 있다.')];
 for(const id of ['pier','boarding','cabinet','silence','source'])delete N[id];
-D.build='6.2.2';root.YKData=D;if(typeof module!=='undefined')module.exports=D;
+D.build='6.4.0';root.YKData=D;if(typeof module!=='undefined')module.exports=D;
 
 N.storeLevel.art='flood-rescue.webp';N.storeLevel.focal='70% center';
 for(const id of ['marketNarrow','marketTrap','marketCross'])N[id].art='market-crossing.webp';
 N.lastWaiting.art='pier-rest.webp';N.lastWaiting.focal='65% center';
+// Explicitly mark only player questions between two receiver messages.
+for(const node of Object.values(N))for(let i=1;i<node.lines.length-1;i++){const l=node.lines[i],radio=x=>['수신기','교신 상대'].includes(x?.who);if(l.who==='나'&&radio(node.lines[i-1])&&radio(node.lines[i+1]))l.channel='transmit';}
+const encounters={
+ door:{kind:'hand',label:'문틈에서 손이 뻗어 온다.'},
+ schoolPatrol:{kind:'paper',figure:true,label:'복도 끝의 형체가 소리에 반응한다.'},
+ schoolHold:{kind:'paper',figure:true,label:'형체가 문 앞을 막고 있다.'},
+ ledgerWarning:{kind:'paper',label:'유리 위 손자국이 하나 더 늘었다.'},
+ marketVoice:{kind:'cloth',label:'천 아래에서 손이 움직인다.'},
+ marketTrap:{kind:'cloth',label:'발밑의 상자가 벌어지기 시작한다.'},
+ storePressure:{kind:'water',label:'문 아래에서 물이 밀려 나온다.'},
+ floodWarning:{kind:'water',label:'배수관의 흐름이 거꾸로 바뀐다.'},
+ pumpBackflow:{kind:'water',label:'물높이가 다시 올라온다.'},
+ signalSurge:{kind:'signal',label:'수신 잡음이 전등 소리와 겹친다.'}
+};for(const [id,cue]of Object.entries(encounters))N[id].encounter=cue;
 })(globalThis);

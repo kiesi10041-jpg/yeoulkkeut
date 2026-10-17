@@ -165,6 +165,11 @@
     "sha256": "47e741f9af5ac1fbe563d6222975d26f5df7696f6b77fdc1af83b54d9d4e7847"
   },
   {
+    "path": "assets/school-warden.webp",
+    "bytes": 100712,
+    "sha256": "9538c1bcff5cd833836127ce747a135133402670e26a051ad2e897317a33e1a9"
+  },
+  {
     "path": "assets/school.webp",
     "bytes": 233292,
     "sha256": "33b8a12be64f5935edeebc45cf9463759f48330b8ab856ec2cce6cd23778300d"
@@ -198,5 +203,10 @@
     "path": "assets/town.webp",
     "bytes": 237318,
     "sha256": "cf19fe5fcaa19b647fc4386be563d7b224054ec7ca9368a1d2399363aa0b91e6"
+  },
+  {
+    "path": "assets/village-map.webp",
+    "bytes": 328682,
+    "sha256": "02171114e56f37e389e8888d5d5d34b356ff0d8d95ee8a8e3695c3c97f62fe82"
   }
 ]

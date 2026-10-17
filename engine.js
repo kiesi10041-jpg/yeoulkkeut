@@ -1,6 +1,6 @@
 (function(root){
 if(typeof module!=='undefined'){require('./story.js');require('./campaign.js');require('./world.js');}
-const D=root.YKData,W=root.YKWorld,BUILD='6.2.2';
+const D=root.YKData,W=root.YKWorld,BUILD='6.4.0';
 const emptyMeta=()=>({version:610,ends:[],knowledge:[],seen:[],preferences:{sound:false,vibration:false,music:45,effects:55,reduce:false,large:false}});
 const fresh=()=>({version:610,contentBuild:BUILD,place:'shelter',visitedPlaces:['shelter'],worldNotes:[],talked:[],travelLog:[],journey:null,explore:null,node:'arrival',chapterTitle:'01 · 문이 열리기 전',page:0,erosion:0,flags:[],asked:[],chat:[],trail:[],ending:null});
 const clone=x=>JSON.parse(JSON.stringify(x));
@@ -13,7 +13,7 @@ function retry(r){const restored=r.checkpoint?clone(r.checkpoint):fresh();delete
 function available(r,m){if(r.ending||r.explore)return [];return D.nodes[r.node].choices.filter(c=>(!c.requires||m.knowledge.includes(c.requires))&&(!c.flag||r.flags.includes(c.flag))&&(!c.unless||!r.flags.includes(c.unless))&&(!c.needAll||c.needAll.every(f=>r.flags.includes(f)))&&(!c.needAny||c.needAny.some(f=>r.flags.includes(f))));}
 function choose(r,m,id){const c=available(r,m).find(c=>c.id===id);if(!c||r.page<lines(r).length-1)return false;r.trail.push({node:r.node,id});r.trail=r.trail.slice(-100);for(const f of c.flags||[])if(!r.flags.includes(f))r.flags.push(f);r.erosion=Math.max(0,Math.min(100,r.erosion+(c.erosion||0)));if(!m.seen.includes(r.node))m.seen.push(r.node);
  const to=c.routeByFlag?(r.flags.includes(c.routeByFlag.flag)?c.routeByFlag.yes:c.routeByFlag.no):c.to;
- if(to.startsWith('end:')){const id=to.slice(4),e=D.endings[id];r.ending=id;if(!m.ends.includes(id))m.ends.push(id);if(e.knowledge&&!m.knowledge.includes(e.knowledge))m.knowledge.push(e.knowledge);}else{r.node=to;r.page=0;r.place=W.regions[to]||r.place;r.explore=null;r.journey=null;if(!r.visitedPlaces.includes(r.place))r.visitedPlaces.push(r.place);const node=D.nodes[to];if(node.chapter)r.chapterTitle=node.chapter;if(node.checkpoint)capture(r);}
+ if(to.startsWith('end:')){const id=to.slice(4),e=D.endings[id];r.ending=id;if(!m.ends.includes(id))m.ends.push(id);if(e.knowledge&&!m.knowledge.includes(e.knowledge))m.knowledge.push(e.knowledge);}else{r.node=to;if(to==='passed'&&!r.flags.includes('doorPassed'))r.flags.push('doorPassed');r.page=0;r.place=W.regions[to]||r.place;r.explore=null;r.journey=null;if(!r.visitedPlaces.includes(r.place))r.visitedPlaces.push(r.place);const node=D.nodes[to];if(node.chapter)r.chapterTitle=node.chapter;if(node.checkpoint)capture(r);}
  return true;}
 function next(r,m){if(r.ending||r.explore)return false;const last=lines(r).length-1;if(r.page<last){r.page++;if(r.page===last&&!m.seen.includes(r.node))m.seen.push(r.node);return true;}return false;}
 function replay(r){const n=D.nodes[r.node];if(r.ending||r.explore||!n.previous)return false;const key='replay:'+r.node;if(r.asked.includes(key))return false;r.asked.push(key);r.erosion=Math.min(100,r.erosion+12);return true;}
@@ -22,7 +22,7 @@ function ask(r,m,id){if(r.ending||r.explore)return false;const n=D.nodes[r.node]
 function region(r){return r.explore?.place||r.place||W.regions[r.node]||'shelter';}
 function route(from,to){if(!W.places[from]||!W.places[to])return null;const q=[[from]],seen=new Set([from]);while(q.length){const p=q.shift(),at=p.at(-1);if(at===to)return p;for(const n of W.places[at].links)if(!seen.has(n)){seen.add(n);q.push([...p,n]);}}return null;}
 function planTravel(r,m,id){const c=available(r,m).find(c=>c.id===id);if(!c||r.page<lines(r).length-1||c.to.startsWith('end:'))return false;const target=W.regions[c.to];if(!target||target===region(r))return false;r.journey={node:r.node,id,target};return true;}
-function canTravel(r,to){const from=region(r);return !r.ending&&!!W.places[from]?.links.includes(to)&&(r.flags.includes("doorPassed")||r.journey?.node==="door"||r.journey?.node==="waiting"||!["arrival","bolt","door","waiting"].includes(r.node));}
+function canTravel(r,to){const from=region(r);if(r.ending||!W.places[from]?.links.includes(to))return false;if(W.regions[r.node]==='shelter'&&!r.flags.includes('doorPassed')&&!r.journey)return false;if(D.nodes[r.node].encounter&&!r.explore)return false;return true;}
 function travel(r,m,to){const from=region(r);if(!canTravel(r,to))return false;r.place=to;r.explore={place:to};r.travelLog.push({from,to});r.travelLog=r.travelLog.slice(-100);if(!r.visitedPlaces.includes(to))r.visitedPlaces.push(to);if(r.journey&&r.journey.target===to){const j=r.journey;r.explore=null;r.journey=null;if(j.node===r.node)return choose(r,m,j.id);return false;}if(to===W.regions[r.node])r.explore=null;return true;}
 function returnToStory(r,m){if(r.ending)return false;const target=W.regions[r.node],path=route(region(r),target);r.journey=null;if(!path)return false;for(const to of path.slice(1))travel(r,m,to);r.explore=null;r.place=target;return true;}
 function inspectPlace(r,id){const at=region(r),spot=W.places[at].spots.find(s=>s[0]===id);if(!spot||r.ending)return false;const key=at+':'+id;if(!r.worldNotes.includes(key))r.worldNotes.push(key);return spot;}

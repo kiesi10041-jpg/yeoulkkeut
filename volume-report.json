@@ -1,5 +1,5 @@
 {
-  "build": "6.2.0",
+  "build": "6.4.0",
   "scope": "first complete campaign, early setbacks excluded",
   "humanTimed": false,
   "renderedBrowserVerified": true,
@@ -7,14 +7,14 @@
   "totalEndings": 12,
   "completeEndings": 6,
   "setbackEndings": 6,
-  "totalAuthoredCharacters": 42605,
+  "totalAuthoredCharacters": 42615,
   "representativeDirectRoute": {
     "ending": "together",
     "chapters": 9,
     "uniqueScenes": 65,
     "actionSelections": 71,
     "textBlocks": 477,
-    "displayedCharacters": 32933,
+    "displayedCharacters": 32943,
     "visited": [
       "arrival",
       "bolt",
