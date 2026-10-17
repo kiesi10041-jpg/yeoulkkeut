@@ -145,6 +145,11 @@
     "sha256": "1f5554d8593dbf176a249afc91cb13dd8c5d6c97eb30fe34752236f7978395ed"
   },
   {
+    "path": "assets/receiver-hardware.webp",
+    "bytes": 216736,
+    "sha256": "9ad7244f13974f5461b90adc0404c247349d87c0a85138935d7096e27f14fdbf"
+  },
+  {
     "path": "assets/relay.webp",
     "bytes": 253416,
     "sha256": "b965cefabfdb5601e85b4b1f03cb2f62f2f2ebde0d0f44b510d3272a01cb7fb3"
