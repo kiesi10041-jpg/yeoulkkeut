@@ -5,14 +5,29 @@
     "sha256": "5a379592c8073a71d4038a5ee657a26f2d62756d058dfaf92e91a0a37fe06c30"
   },
   {
+    "path": "assets/audio/archive.mp3",
+    "bytes": 864909,
+    "sha256": "3a1aed7c4ff0e9d482a459fa3957c6b0885438faab33cc8dbaf33abf64ba6818"
+  },
+  {
     "path": "assets/audio/coast.mp3",
     "bytes": 960765,
     "sha256": "13d19561fc66418d9625155369325aea23df638d58fd58d45bd1ef5135f4eb9f"
   },
   {
+    "path": "assets/audio/dawn.mp3",
+    "bytes": 864909,
+    "sha256": "88a7a8a7bff458b9cb4e33af77a9d9c0d52a5ce2467cb2b8dddeaa021989e9fb"
+  },
+  {
     "path": "assets/audio/room.mp3",
     "bytes": 960765,
     "sha256": "e6af056dd870f19858459f99bd3adcf560002d5474c551a563539a14581c20e1"
+  },
+  {
+    "path": "assets/audio/school.mp3",
+    "bytes": 864909,
+    "sha256": "00237142713e2a97ccd05518f0c9fef73edcc5979c15d68d3641f66d410ef9ea"
   },
   {
     "path": "assets/audio/signal.mp3",
@@ -23,6 +38,11 @@
     "path": "assets/audio/threat.mp3",
     "bytes": 960765,
     "sha256": "35213647933c25a4dad66279149ec077dcadc6fd13de038df652ff99eaec2358"
+  },
+  {
+    "path": "assets/audio/water.mp3",
+    "bytes": 864909,
+    "sha256": "040515cad1c28b6c2b75e6e6327c549abdc5a3ab74aca0a41b9a19ebb6f8d8e3"
   },
   {
     "path": "assets/clinic.webp",
@@ -83,6 +103,11 @@
     "path": "assets/ending-together.webp",
     "bytes": 299122,
     "sha256": "f25e3ad7f3c404d3b5a19e3d4515927fc7ef81b3c1c4fce8c092eac949cd0af9"
+  },
+  {
+    "path": "assets/ending-two-taps.webp",
+    "bytes": 163214,
+    "sha256": "7c658be49447414c0a97d7dea00163d281787977f9b20c35b0c23e52962b903a"
   },
   {
     "path": "assets/ending-water.webp",

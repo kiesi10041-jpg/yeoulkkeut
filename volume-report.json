@@ -1,5 +1,5 @@
 {
-  "build": "6.5.0",
+  "build": "7.0.0",
   "scope": "first complete campaign, early setbacks excluded",
   "humanTimed": false,
   "renderedBrowserVerified": true,
@@ -7,14 +7,14 @@
   "totalEndings": 12,
   "completeEndings": 6,
   "setbackEndings": 6,
-  "totalAuthoredCharacters": 42615,
+  "totalAuthoredCharacters": 42772,
   "representativeDirectRoute": {
     "ending": "together",
     "chapters": 9,
     "uniqueScenes": 65,
-    "actionSelections": 71,
-    "textBlocks": 477,
-    "displayedCharacters": 32943,
+    "actionSelections": 72,
+    "textBlocks": 485,
+    "displayedCharacters": 33217,
     "visited": [
       "arrival",
       "bolt",
@@ -86,21 +86,22 @@
       "manifestSignal",
       "manifestDesk",
       "boardingPlan",
+      "outerCheck",
       "outerCheck"
     ]
   },
   "readingOnlyModels": [
     {
       "assumedCharactersPerMinute": 350,
-      "minutes": 94.1
+      "minutes": 94.9
     },
     {
       "assumedCharactersPerMinute": 500,
-      "minutes": 65.9
+      "minutes": 66.4
     },
     {
       "assumedCharactersPerMinute": 650,
-      "minutes": 50.7
+      "minutes": 51.1
     }
   ],
   "notes": [

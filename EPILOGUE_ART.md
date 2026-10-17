@@ -1,0 +1,7 @@
+# 두 번의 신호 · 결말 이미지
+
+내장 imagegen으로 기존 나래 초상을 정체성·의상 참고로 사용해 생성함. assets/ending-two-taps.webp에 통합함. 마지막에 약속을 기억하는 선택을 하고 together 결말을 맞으면 표시함.
+
+## 생성 프롬프트
+
+Use case: illustration-story. Asset type: emotional epilogue illustration for an original Korean coastal horror game. Input reference is Nara identity and costume only: preserve her short dark hair, tired Korean face, weathered charcoal field jacket. Wide cinematic scene inside a modest small coastal evacuation boat in very early blue dawn, Nara seated beside a narrow window on the right half, breathing quietly and looking toward the unseen player with a restrained small relieved expression, her fingertips resting on a metal railing as though she has just tapped twice. In the lower foreground, only the anonymous player's ordinary hand rests a short distance away on the same railing; NOT holding her hand, not romantic. A folded worn paper checklist beside her, an unpowered portable text receiver lying face down, grey sea through the window and faint warm light from shore far away. Focus is an ordinary human response after a frightening night, bittersweet quiet, not triumphant, not a monster reveal. Detailed painterly realistic game art, consistent face, subtle cold and amber palette, center-safe crop includes Nara face and both separate hands and rail. No readable text, no UI, no logos, no extra fingers, no blood, no watermark.

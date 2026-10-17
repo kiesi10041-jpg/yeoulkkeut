@@ -1,0 +1,26 @@
+[
+  {
+    "track": "school",
+    "seconds": 72,
+    "peak_before_encode": 0.3,
+    "bytes": 864909
+  },
+  {
+    "track": "water",
+    "seconds": 72,
+    "peak_before_encode": 0.3,
+    "bytes": 864909
+  },
+  {
+    "track": "archive",
+    "seconds": 72,
+    "peak_before_encode": 0.3,
+    "bytes": 864909
+  },
+  {
+    "track": "dawn",
+    "seconds": 72,
+    "peak_before_encode": 0.3,
+    "bytes": 864909
+  }
+]

@@ -1,9 +1,10 @@
+const solve=require('./solve-fixture.cjs');
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),K=require('./engine.js'),D=K.D,route=require('./route-fixture.cjs');
 const results=[];function test(name,fn){fn();results.push(name);console.log('PASS',name)}
 function read(r,m){while(K.next(r,m)){};}
-function walk(ids,m=K.emptyMeta()){const r=K.fresh();K.capture(r);for(const id of ids){read(r,m);assert(K.choose(r,m,id),'unavailable '+r.node+':'+id);}return r;}
-function before(node,m=K.emptyMeta(),ids=route){const r=K.fresh();K.capture(r);for(const id of ids){if(r.node===node)return r;read(r,m);assert(K.choose(r,m,id),r.node+':'+id);}assert.equal(r.node,node);return r;}
-function choose(r,m,id){read(r,m);assert(K.choose(r,m,id),r.node+':'+id);}
+function walk(ids,m=K.emptyMeta()){const r=K.fresh();K.capture(r);for(const id of ids){read(r,m);solve(K,r,id);assert(K.choose(r,m,id),'unavailable '+r.node+':'+id);}return r;}
+function before(node,m=K.emptyMeta(),ids=route){const r=K.fresh();K.capture(r);for(const id of ids){if(r.node===node)return r;read(r,m);solve(K,r,id);assert(K.choose(r,m,id),r.node+':'+id);}assert.equal(r.node,node);return r;}
+function choose(r,m,id){read(r,m);solve(K,r,id);assert(K.choose(r,m,id),r.node+':'+id);}
 const rested=route.flatMap((id,i)=>id==='walk'&&route[i+1]==='pier'?['rest','check']:[id]);
 test('all authored scene, choice, art and ending references resolve',()=>{for(const [id,n]of Object.entries(D.nodes)){assert(n.lines.length);for(const l of n.lines)assert.equal(typeof l.text,'string');for(const f of [n.art,n.portrait,n.creature].filter(Boolean))assert(fs.existsSync(path.join(__dirname,'assets',f)),id+':'+f);for(const c of n.choices){for(const to of [c.to,...(c.routeByFlag?[c.routeByFlag.yes,c.routeByFlag.no]:[])])assert(to.startsWith('end:')?D.endings[to.slice(4)]:D.nodes[to],id+':'+to);if(c.requires)assert(D.knowledge[c.requires]);}}for(const e of Object.values(D.endings))assert(fs.existsSync(path.join(__dirname,'assets',e.art)));});
 test('full first-run route visits all nine campaign chapters and ends with honest handoff',()=>{const r=walk(route);assert.equal(r.ending,'together');for(const f of ['schoolComplete','doyunTreated','haewonRescued','drainComplete','relayComplete','archiveComplete','joinedSuho','manifestPeople','manifestSignal'])assert(r.flags.includes(f),f);assert.equal(r.checkpoint.node,'harborReturn');});
