@@ -23,7 +23,7 @@ const people={
 function present(r,place){return Object.keys(people).filter(n=>{const p=people[n];if(!r.flags.includes(p.flag))return false;if(n==='윤서'&&!r.flags.includes('yunseoJoined'))return place==='relay';return true;});}
 function dialogue(r,name,topic){const f=x=>r.flags.includes(x);const pair=(a,b)=>[{who:'나',text:a},{who:name,text:b}];
  if(name==='나래'&&topic==='now')return f('naraStabilized')?pair('지금도 다른 말 들려?','지금은 네 말만. 아까처럼 멈추면, 네가 여기 있다고 한 번만 말해 줘.'):f('naraDisconnected')?pair('조금 더 쉴래?','응. 안 들린다고 괜찮은 건 아닌 것 같아. 내가 먼저 가자고 해도 한 번만 더 물어봐 줘.'):pair('잠깐 쉬었다 갈까요?','문만 확인하고요. 닫히는 소리 들으니까 자꾸 뒤를 보게 되네요.');
- if(name==='나래')return pair(f('naraPromise')?'점검표는 내가 들고 있을까?':'점검표 좀 다시 볼 수 있어요?',f('naraPromise')?'응. 마지막 줄, 지우지 말아 줘. 내가 괜찮다고 우겨도.':'네. 번호로 답하라는 줄은 제가 쓴 거예요. 아래 젖은 부분은 밝은 데서 같이 봐요.');
+ if(name==='나래')return pair(f('familiarNara')?'점검표는 내가 들고 있을까?':'점검표 좀 다시 볼 수 있어요?',f('familiarNara')?'응. 마지막 줄, 지우지 말아 줘. 내가 괜찮다고 우겨도.':'네. 번호로 답하라는 줄은 제가 쓴 거예요. 아래 젖은 부분은 밝은 데서 같이 봐요.');
  if(name==='서진'&&topic==='family')return f('haewonRescued')?pair('해원이는 어때요?','자꾸 가방부터 만져요. 약 잘못 전했다고 혼날 줄 알았나 봐요. 그냥 옆에 있을게요, 지금은.'):pair('동생 찾으면 뭐부터 하고 싶어요?','혼내려고 했는데요. 지금은…… 얼굴부터 보고요. 실제로 앞에 있는지, 그거부터.');
  if(name==='서진')return pair('사진 다시 봐도 돼요?','여기요. 우비는 노란색이고 왼손 검지에 반창고 있어요. 제가 찍은 사진이에요. 뒷면 시각만 보지는 말아 주세요.');
  if(name==='도윤'&&topic==='hand')return pair('가방은 제가 들까요?','아, 또 이 손으로 들려고 했네요. 부탁드릴게요. 걸을 수는 있어요. 못 하는 건 먼저 말할게요.');
