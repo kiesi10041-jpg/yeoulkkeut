@@ -1,0 +1,61 @@
+{
+  "errors": [],
+  "ending": "together",
+  "props": [
+    "photo front/back",
+    "note concealed/revealed",
+    "ledger/tickets"
+  ],
+  "levels": [
+    {
+      "value": 0,
+      "band": "0",
+      "growth": 0,
+      "classes": "",
+      "hidden": true
+    },
+    {
+      "value": 25,
+      "band": "1",
+      "growth": 0.118,
+      "delta": "+25",
+      "classes": "erosionSurge",
+      "hidden": false
+    },
+    {
+      "value": 45,
+      "band": "2",
+      "growth": 0.353,
+      "delta": "+20",
+      "classes": "erosionSurge",
+      "hidden": false
+    },
+    {
+      "value": 65,
+      "band": "3",
+      "growth": 0.588,
+      "delta": "+20",
+      "classes": "erosionSurge",
+      "hidden": false
+    },
+    {
+      "value": 90,
+      "band": "4",
+      "growth": 0.882,
+      "delta": "+25",
+      "classes": "erosionSurge",
+      "hidden": false
+    },
+    {
+      "value": 40,
+      "band": "1",
+      "growth": 0.294,
+      "delta": "-50",
+      "classes": "erosionRecover",
+      "hidden": false
+    }
+  ],
+  "viewports": 4,
+  "homeAndEndingClear": true,
+  "realDevice": false
+}

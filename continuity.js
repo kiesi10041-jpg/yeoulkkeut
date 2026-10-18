@@ -158,6 +158,27 @@ D.endingExtra=r=>[
  ...(r.ending==='together'&&r.flags.includes('naraHurried')?['나래가 계단 앞에서 팔을 내민다. 네가 잡으려 하자 잠깐 기다리라는 손짓을 한다. 발 디딜 곳을 찾은 뒤, 이번에는 먼저 네 손을 잡는다.']:[]),
  ...(r.ending==='shared'&&r.flags.includes('diagram')?['너는 방재 창고에서 본 도면의 중계함 위치를 종이 구석에 옮긴다. 나래가 물기가 마른 뒤 같이 가 보자고 말한다.']:[])
 ];
+
+// Props are revealed at the paragraph where a person actually shows them.
+N.schoolGate.lines[4].text='서진이 명부에 펜을 대려다 멈춘다. 빈칸인 줄 알았던 곳에 12, 17, 23이 적혀 있다. 나래가 자기 번호표를 꺼낸다. 서진도 주머니에서 23번 표를 꺼내 나란히 놓는다.';
+N.schoolGate.lines[5].text='저희 번호인데…… 누가 적었죠?';
+N.schoolGate.lines[6].text='일단 지우지는 말죠. 옆에 적을게요.';
+N.familyPhoto.lines[1].text='서진이 사진 옆에 손목시계를 놓는다. 시계는 4시 31분, 사진 뒤에는 4시 51분이 적혀 있다. 서진이 사진을 뒤집었다가 다시 본다. 숫자는 그대로다.';
+N.familyPhoto.lines[6].text='서진이 빈 종이에 3시 50분이라고 적는다. 사진과 함께 접어 넣으려다 얼굴 쪽을 다시 보여 준다. 노란 우비와 검은 가방. “왼손 검지에 반창고도 붙였어요. 나가기 전에 제가 붙여 줬거든요.”';
+N.shelfSlip.lines[5].text='남자가 손을 빼내려다 멈춘다. 붕대에 핏물이 더 번진다. 서진이 자기 가방에서 마른 천을 꺼내 문틈으로 밀어 넣는다.';
+N.pumpAir.lines[4].text='회색 레버를 조금 열자 배관에서 공기가 샌다. 압력계가 내려가며 소리도 작아진다. 스피커에서 따라오던 잡음은 그 크기 그대로 남는다.';
+N.relayRoom.lines[0].text='낡은 녹음기와 수신 화면이 같은 책상에 놓여 있다. 윤서는 한쪽 귀에만 이어폰을 꽂았다. 문을 닫자 이어폰을 빼고 너희 쪽으로 돌아선다.';
+N.departureRecord.lines[3].text='네. 도착하면 이 종이부터 보여 주세요. 제 근무 번호도 적어 둘게요.';
+N.lastWaiting.lines[0].text='나래가 난간 안쪽에 앉는다. 서진은 해원에게 담요를 덮어 주고, 도윤은 선장에게 다음 배를 부탁한다. 선장이 명부를 펴 남을 사람의 줄에 표시한다.';
+N.lastWaiting.lines[2].text='나래가 꺼진 수신기를 가방 안쪽으로 밀어 넣는다. 네가 벤치 옆에 서자 앉을 자리를 조금 비켜 준다.';
+N.lastWaiting.lines[4].text='너는 쪽지에 적힌 대기소를 가리킨다. 골목 끝 비상등이 보인다. 나래도 고개를 들어 그 불빛을 확인한다.';
+N.archiveMap.lines[0].text='수호가 지도를 펼친다. 시장 통로에는 흰 선이, 물자가 쌓인 곳에는 사선이 그어져 있다. 모서리에 오늘 날짜와 45번이 적혀 있다.';
+N.archiveMap.lines[3].text='수호가 마지막 매대에 손가락을 댄다. “여긴 좀 좁아요.” 도윤이 그 옆 판자 표시를 짚는다. 해원이 두 사람 사이로 지도를 들여다본다.';
+N.arrival.lines[1].prop='ticket17';N.look.prop='ticket17';N.passed.prop='ticket17';
+N.nara.lines.find(l=>l.text.includes('점검표를 내민다')).prop='note';N.paper.prop='note';N.note.prop='note';
+N.squareArrival.lines[N.squareArrival.lines.length-1].prop='photo';N.familyPhoto.prop='photo';N.familyPhoto.lines[0].propSide='back';N.familyPhoto.lines[1].propSide='back';
+N.familyPhoto.choices[0].flags=[...(N.familyPhoto.choices[0].flags||[]),'photoRead'];
+N.schoolGate.lines[4].prop='ledger';N.schoolPatrol.prop='ledger';N.schoolHold.prop='ledger';N.schoolPass.prop='ledger';N.archiveLabel.prop='ticket45';N.manifestPeople.prop='tickets';
 const mountPrevious=root.mountGamePlay;
 root.mountGamePlay=K=>{
  mountPrevious(K);

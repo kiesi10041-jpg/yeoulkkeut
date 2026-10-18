@@ -115,9 +115,19 @@
     "sha256": "1c465dd67532a3bce78f997fcc4a99aa140b653e4e36b36779d3c1d66facd19a"
   },
   {
+    "path": "assets/erosion-growth.webp",
+    "bytes": 267900,
+    "sha256": "c3580fc755fc9ee24b06b2c29af8b193abf1e0ca0df3f452522a9527bfdc00be"
+  },
+  {
     "path": "assets/flood-rescue.webp",
     "bytes": 130776,
     "sha256": "01f99bebe80847389da4c3299e2581bd968c43f1ff23952bc9fcb3b1e9f56836"
+  },
+  {
+    "path": "assets/haewon-photo.webp",
+    "bytes": 77640,
+    "sha256": "5e3dcf40cc8902ae481cd3b92c2d2ae3255912d084d00b896f1a701caba73c76"
   },
   {
     "path": "assets/haewon.webp",
@@ -175,9 +185,9 @@
     "sha256": "1f5554d8593dbf176a249afc91cb13dd8c5d6c97eb30fe34752236f7978395ed"
   },
   {
-    "path": "assets/receiver-hardware.webp",
-    "bytes": 216736,
-    "sha256": "9ad7244f13974f5461b90adc0404c247349d87c0a85138935d7096e27f14fdbf"
+    "path": "assets/prop-paper.webp",
+    "bytes": 82512,
+    "sha256": "c39552209360478c997040d82a0d5eef894397ab835c4b81fb9ab991dfc89396"
   },
   {
     "path": "assets/relay.webp",
@@ -188,11 +198,6 @@
     "path": "assets/reservoir.webp",
     "bytes": 256556,
     "sha256": "c8c5579051ca41f582552e7a6f6ca1b8d0e6afaccd2f80cc0123f130257eee7f"
-  },
-  {
-    "path": "assets/school-creature.webp",
-    "bytes": 294438,
-    "sha256": "47e741f9af5ac1fbe563d6222975d26f5df7696f6b77fdc1af83b54d9d4e7847"
   },
   {
     "path": "assets/school-warden.webp",

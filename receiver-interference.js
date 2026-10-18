@@ -55,5 +55,5 @@ root.validateInterference=r=>{
  for(const e of q.entries)if(!e||!byId[e.id]||!q.used.includes(e.id)||!byId[e.id].nodes.includes(e.node)||e.text!==byId[e.id].text||!['text','carrier'].includes(e.kind)||e.kind!==(byId[e.id].kind||'text')||typeof e.place!=='string'||!Number.isFinite(e.erosion)||e.erosion<0||e.erosion>100||e.erosion<(byId[e.id].minErosion||0)||!Number.isFinite(e.at)||e.at<0)throw Error('미확인 수신 내용이 올바르지 않습니다.');
 };
 const mount=root.mountGamePlay;root.mountGamePlay=K=>{mount(K);K.interference={eligible,canSchedule,wait,attempt,entries:r=>(r?.interference?.entries||[]).slice().reverse()};};
-D.build='7.3.0';
+D.build='7.4.0';
 })(globalThis);
