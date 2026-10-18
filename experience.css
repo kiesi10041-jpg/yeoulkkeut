@@ -24,3 +24,6 @@ body[data-erosion-band="2"] #sceneImage{filter:saturate(.82) contrast(1.06)}body
 .reduce #erosionGrowth{transition:none;transform:none;opacity:calc(var(--growth,0)*.5)}.reduce #erosionLabel{animation:none!important;transition:none}.reduce #erosionLabel:before{transition:none}@media(prefers-reduced-motion:reduce){#erosionGrowth{transition:none;transform:none}#erosionLabel{animation:none!important}#erosionLabel:before{transition:none}}
 
 @media(max-width:899px){#stage.hasProp .sceneCaption{opacity:.12}}
+
+/* Decision signal remains beside the choices on narrow screens. */
+.sceneSignal{display:block;width:100%;min-height:44px;margin:0 0 8px;padding:10px 14px;border:1px solid #8f9e89;background:#202b28;color:#e4e9d9;text-align:left;font-size:14px;letter-spacing:.03em}.witnessNotes{margin:12px 0}.witnessNotes summary{min-height:44px;cursor:pointer;padding:12px}.witnessNotes svg{width:100%;max-height:200px}.waterActions [aria-pressed=true]{outline:2px solid #b4c6a3}#workbenchReceiver{min-height:44px;margin:8px 0;width:100%}
