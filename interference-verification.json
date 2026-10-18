@@ -1,0 +1,15 @@
+{
+  "passed": 10,
+  "checks": [
+    "first contact, active encounters, exploration and endings cannot emit",
+    "a missed random opportunity cannot be rerolled by reopening the receiver",
+    "events are contextual and keep plot, inventory, evidence and erosion unchanged",
+    "70-second cooldown and maximum two events per chapter",
+    "same event text never repeats and newest six entries survive save/load",
+    "global 12-event limit",
+    "both wordless carrier traces and meaningful messages can occur",
+    "old saves and preferences migrate; malformed entries are rejected",
+    "chance produces a mixture, rather than a mandatory event in every scene",
+    "invasive replies that speak for the player require higher erosion"
+  ]
+}

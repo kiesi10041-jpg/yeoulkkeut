@@ -6,43 +6,43 @@
   },
   {
     "path": "assets/audio/archive.mp3",
-    "bytes": 864909,
-    "sha256": "3a1aed7c4ff0e9d482a459fa3957c6b0885438faab33cc8dbaf33abf64ba6818"
+    "bytes": 1152909,
+    "sha256": "34a1802c574e8e3d7ac7f6ab1102d33ebae430a5e765742c3cf5260f3d7fa2b9"
   },
   {
     "path": "assets/audio/coast.mp3",
-    "bytes": 960765,
-    "sha256": "13d19561fc66418d9625155369325aea23df638d58fd58d45bd1ef5135f4eb9f"
+    "bytes": 1152909,
+    "sha256": "cfeb88d2c6870b593e63efbaece9b45270dec108ab3e80a2ca0b3c7e57a90ad3"
   },
   {
     "path": "assets/audio/dawn.mp3",
-    "bytes": 864909,
-    "sha256": "88a7a8a7bff458b9cb4e33af77a9d9c0d52a5ce2467cb2b8dddeaa021989e9fb"
+    "bytes": 1152909,
+    "sha256": "696cd1e25196c25493c51adae44129b9f11f6f2d0ee845c8f13a23279d9e9cc0"
   },
   {
     "path": "assets/audio/room.mp3",
-    "bytes": 960765,
-    "sha256": "e6af056dd870f19858459f99bd3adcf560002d5474c551a563539a14581c20e1"
+    "bytes": 1152909,
+    "sha256": "b105b7745e74aa31f67c726fc8ce2264cb6022305438adb92589bbb70e3a241c"
   },
   {
     "path": "assets/audio/school.mp3",
-    "bytes": 864909,
-    "sha256": "00237142713e2a97ccd05518f0c9fef73edcc5979c15d68d3641f66d410ef9ea"
+    "bytes": 1152909,
+    "sha256": "cc4d91216a34a3a553a71228be086d02d2d2f3b44d7538b06d53cf31e1d2098d"
   },
   {
     "path": "assets/audio/signal.mp3",
-    "bytes": 960765,
-    "sha256": "c3426fbb12b44a088c6afac81b5f125d1ef9e99f7d50eaa30d9473ed41c71cac"
+    "bytes": 1152909,
+    "sha256": "d6a895d895de32e930449a743f9e0cb67e2cf54a20f41fbd8ab33d9e31b9a518"
   },
   {
     "path": "assets/audio/threat.mp3",
-    "bytes": 960765,
-    "sha256": "35213647933c25a4dad66279149ec077dcadc6fd13de038df652ff99eaec2358"
+    "bytes": 1152909,
+    "sha256": "9760c8839ef9e3aabe055a91860a8f3220960ad98ebf05583c30e42f8c16bc20"
   },
   {
     "path": "assets/audio/water.mp3",
-    "bytes": 864909,
-    "sha256": "040515cad1c28b6c2b75e6e6327c549abdc5a3ab74aca0a41b9a19ebb6f8d8e3"
+    "bytes": 1152909,
+    "sha256": "27cbe36e8e5681d20984337700b2eb4f8043dde0d5a1fb6f37c82462769157df"
   },
   {
     "path": "assets/clinic.webp",

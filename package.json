@@ -1,13 +1,15 @@
 {
   "name": "janhyang-beta",
-  "version": "7.0.0-dev",
+  "version": "7.3.0-dev",
   "private": true,
   "scripts": {
     "test": "node verify.cjs",
     "test:ui": "node ui-verification.cjs",
     "report:volume": "node volume-report.cjs",
     "test:play": "node play-verification.cjs",
-    "test:world": "node world-verification.cjs"
+    "test:world": "node world-verification.cjs",
+    "test:continuity": "node continuity-verification.cjs",
+    "test:interference": "node interference-verification.cjs"
   },
   "devDependencies": {
     "jsdom": "26.1.0"

@@ -26,7 +26,7 @@
     "save roundtrip preserves full campaign, replay and chapter state",
     "old-build, invalid pages and malformed chat imports are rejected",
     "ending state rejects further actions, questions and page changes",
-    "representative direct full route exceeds 32000 displayed characters with no wait gates",
+    "representative direct full route retains over 30000 displayed characters after removing repeated explanations with no wait gates",
     "school dialogue obeys its own no-name rule before leaving the building"
   ]
 }

@@ -1,0 +1,193 @@
+{
+  "ending": "together",
+  "storyActions": 72,
+  "errors": [],
+  "layout": [
+    {
+      "view": {
+        "width": 320,
+        "height": 568
+      },
+      "overflow": false,
+      "dialogue": {
+        "x": 0,
+        "y": 138,
+        "right": 320,
+        "bottom": 281,
+        "width": 320,
+        "height": 143
+      },
+      "actions": {
+        "x": 0,
+        "y": 281,
+        "right": 320,
+        "bottom": 504,
+        "width": 320,
+        "height": 223
+      },
+      "buttons": [
+        {
+          "height": 47.999969482421875,
+          "width": 284
+        },
+        {
+          "height": 48,
+          "width": 284
+        },
+        {
+          "height": 48,
+          "width": 284
+        }
+      ],
+      "nav": {
+        "x": 163,
+        "y": 510,
+        "right": 232.5,
+        "bottom": 563,
+        "width": 69.5,
+        "height": 53
+      }
+    },
+    {
+      "view": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "dialogue": {
+        "x": 0,
+        "y": 225.234375,
+        "right": 390,
+        "bottom": 557,
+        "width": 390,
+        "height": 331.765625
+      },
+      "actions": {
+        "x": 0,
+        "y": 557,
+        "right": 390,
+        "bottom": 780,
+        "width": 390,
+        "height": 223
+      },
+      "buttons": [
+        {
+          "height": 48,
+          "width": 354
+        },
+        {
+          "height": 48,
+          "width": 354
+        },
+        {
+          "height": 48,
+          "width": 354
+        }
+      ],
+      "nav": {
+        "x": 198,
+        "y": 786,
+        "right": 285,
+        "bottom": 839,
+        "width": 87,
+        "height": 53
+      }
+    },
+    {
+      "view": {
+        "width": 844,
+        "height": 390
+      },
+      "overflow": false,
+      "dialogue": {
+        "x": 295.390625,
+        "y": 42,
+        "right": 600.171875,
+        "bottom": 338,
+        "width": 304.78125,
+        "height": 296
+      },
+      "actions": {
+        "x": 600.171875,
+        "y": 42,
+        "right": 844,
+        "bottom": 338,
+        "width": 243.828125,
+        "height": 296
+      },
+      "buttons": [
+        {
+          "height": 44.00000762939453,
+          "width": 218.828125
+        },
+        {
+          "height": 44,
+          "width": 218.828125
+        },
+        {
+          "height": 44,
+          "width": 218.828125
+        }
+      ],
+      "nav": {
+        "x": 425,
+        "y": 341,
+        "right": 625.5,
+        "bottom": 388,
+        "width": 200.5,
+        "height": 47
+      }
+    },
+    {
+      "view": {
+        "width": 1280,
+        "height": 800
+      },
+      "overflow": false,
+      "dialogue": {
+        "x": 655.546875,
+        "y": 58,
+        "right": 1180,
+        "bottom": 562.21875,
+        "width": 524.453125,
+        "height": 504.21875
+      },
+      "actions": {
+        "x": 655.546875,
+        "y": 562.21875,
+        "right": 1180,
+        "bottom": 800,
+        "width": 524.453125,
+        "height": 237.78125
+      },
+      "buttons": [
+        {
+          "height": 49.59375,
+          "width": 447.671875
+        },
+        {
+          "height": 49.59375,
+          "width": 447.671875
+        },
+        {
+          "height": 49.59375,
+          "width": 447.671875
+        }
+      ],
+      "nav": {
+        "x": 1189,
+        "y": 348,
+        "right": 1272,
+        "bottom": 442.796875,
+        "width": 83,
+        "height": 94.796875
+      }
+    }
+  ],
+  "receptionStates": [
+    "broken",
+    "clean"
+  ],
+  "firstRunRecordsOnly": true,
+  "realDeviceTest": false
+}
