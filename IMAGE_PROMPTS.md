@@ -28,3 +28,45 @@ Use case: compositing. Asset type: cinematic in-game scene, wide landscape for K
 - `assets/school-pledge.webp`: 젖은 학교 명부에 낡은 빈 종이표를 검은 실로 묶는 길고 창백한 손, 반대편에서 표를 놓는 사람 손, 작은 황동 종, 낡은 책상, 새벽 청록과 약한 황색 조명. 글자·숫자·얼굴·유혈 없음. 정확한 번호는 별도 소품 화면의 실제 글자로 표시.
 - `assets/nara-wrist.webp`: 기존 나래의 남색 작업복과 건강한 손, 나무 벤치 위 열쇠와 분리한 녹음기 케이블, 손과 소매에 드리운 배선 같은 초자연적 그림자, 차가운 새벽과 대기소 조명, 글자·UI 없음. 손상이나 상처를 보여 주는 그림이 아님.
 - `assets/ferry-interruption.webp`: 부두에 묶인 작은 한국 연안 대피선 내부, 공용 안내 스피커를 바라보는 나래, 높은 발판 옆 오른손으로 버티는 도윤과 왼손 붕대, 기존 인물의 얼굴·작업복 유지, 창밖의 부두와 계류 줄, 청록 새벽과 선실의 황색 조명, 글자·UI·침몰·유혈 없음.
+
+
+## SCENE_ART.md 통합 기록
+
+# 이동·장면 연출용 이미지 제작
+
+내장 imagegen으로 생성한 두 이미지를 WebP로 변환해 프로젝트에 통합함.
+
+- assets/village-map.webp: 해솔리의 위치와 길을 보여 주는 지도 배경. 장소명·길·버튼은 코드로 표시함.
+- assets/school-warden.webp: 학교 대본의 종·명부·종이 얼굴에 맞춘 형체. 전체 신체를 보존하고 투명도를 유지해 저장함.
+
+## 지도 프롬프트
+
+Use case: illustration-story. Asset type: illustrated background for an interactive map in an original Korean coastal horror game. Portrait 4:5, straight overhead cartographic drawing on aged blue-grey waterproof field paper, contemporary small South Korean fishing village in predawn darkness. Coast and sea occupy far right fifth, small harbor and pier upper right near x70% y13%. Modest waiting hall upper left x14% y17%, central public square x36% y30%, school buildings left center x18% y52%, clinic center x48% y49%, drainage works lower left x31% y75%, small relay shack bottom center x57% y81%, archive building lower right x77% y70%, covered market upper right x76% y38%. Thin weathered paths connect these landmarks in a plausible village street network. Most important use clear large empty paper areas around landmarks for interactive Korean labels to be added by code. Hand drawn restrained ink and watercolor, precise architectural silhouettes, low saturation graphite, desaturated teal sea and faint amber windows. Mood mysterious, not a fantasy world map. NO text, NO letters, NO numbers, NO map pins, NO UI buttons, NO modern navigation app graphics, NO Chinese architecture, NO characters, NO monsters, NO decorative compass rose, NO watermark.
+
+## 학교 형체 프롬프트
+
+Use case: illustration-story. Asset type: transparent full-body antagonist sprite for a Korean folk-horror narrative game. One unnervingly tall, narrow humanlike school attendance keeper, contemporary Korean rural school setting, wearing a weathered dark grey caretaker coat and trousers, standing in three quarter frontal view. The head has no visible human face: a SMALL pale attendance slip hangs where its face should be, completely blank and unlettered, suspended by thread. A small old brass handbell hangs beside the paper from one elongated hand. The other hand holds an OPEN worn attendance ledger against its chest, blank faint columns with no legible writing. Long thin fingers, uncomfortable stillness, crooked posture, ordinary worn shoes. Restrained painterly realistic game illustration, cold grey and pale paper, subtle dull brass. IMPORTANT this is a distinct attendance-keeper creature tied to a no-speaking school rule; NOT a zombie, not a gas mask, not a mouth speaker, not a muscular monster. Entire body and fingers and bell visible, centered with breathing room, no ground, isolated on genuine transparent background, no scenery, no gore, no text, no watermark.
+
+
+## MESSAGE_TERMINAL_ART.md 통합 기록
+
+# 문자 수신 단말기 제작
+
+내장 imagegen으로 넓은 문자 화면과 세 개의 키가 있는 단말기를 생성하고 assets/message-terminal.webp에 RGBA WebP로 통합함. 화면 내용과 버튼 이름은 이미지에 굽지 않고 코드로 표시함. 기기 외곽을 자르지 않고 전체 비율을 유지함. 사건 기록은 기본 메뉴에만 남김.
+
+## 생성 프롬프트
+
+Use case: product-mockup. Asset type: game interface background plate, exactly frontal portable TEXT MESSAGE RECEIVER, no antenna and no walkie talkie parts. Portrait 4:5 composition, the COMPLETE wide rectangular device including all four rounded corners inside the canvas with 4% breathing room, transparent background. A compact thick field data terminal with weathered dark blue-grey painted steel and rubber corners, four small screws, small amber indicator at upper right. One very LARGE absolutely blank deep green flat LCD window occupying x10% to90% and y11% to73%, straight aligned rectangular screen, NO text or symbols inside because live accessible text will be overlaid by code. Along the bottom three equal wide tactile rectangular keys with blank unlettered dark brass keycaps, each centered at x23%,50%,77%, from y80% to92%. NO knob, NO antenna, NO microphone, NO speaker grille, NO side handles, NO additional controls, NO labels, NO logo, NO letters, NO watermark. Detailed realistic painterly game prop, consistent subtle aged materials for Korean coastal horror, practical readable silhouette, restrained edge lighting, no dramatic black background, no human hands, no scenery. All device edges must be fully visible.
+
+
+# v8.3 제작 이미지와 지시문
+
+제작: 기본 제공 image_gen. 기존 수문 UI를 대체하는 프로젝트용 이미지. 첫 수문 그림을 기준으로 상태 변형을 생성했으며, 글자·UI는 이미지에서 제외했다. 원본 1536×1024를 게임에서 쓸 1440×960 WEBP로 변환했다.
+
+- assets/sluice-open.webp: “Straight-on inspection view of a rusted green steel vertical seawater sluice gate between concrete piers, gate raised with wide visible bottom opening, sea rushing toward camera. Red handwheel at right with mechanical spindle. Grounded Korean coastal pump station; cold teal gray, photographic painted horror-game detail. No people, monsters, writing or interface.”
+- assets/sluice-moving.webp: 원본 편집. “Preserve camera, side walls, wheel, lighting and corrosion. Lower the same steel gate vertically so the opening is visibly narrower. Sea water still pushes toward camera with reduced flow. Same physical location; no new objects or text.”
+- assets/sluice-narrow.webp: 원본 편집. “Lower the entire gate until the bottom edge is near 72 percent of the image height. Cover most of the sea view with matching steel, leaving a narrow low stream under the gate. Keep camera, concrete walls and red wheel position.”
+- assets/sluice-closed.webp: 원본 편집. “Lower the gate all the way onto the bottom seal. No gap, no visible sea or horizon through the doorway. Inflow has stopped. Wet concrete and shallow still puddles remain, with no rushing current. Preserve exact framing and machinery.”
+- assets/clue-paper.webp: “Full-bleed blank offwhite 1990s office paper, orthographic top down, fine cellulose fibers, soft central fold, blue-gray damp tidemarks concentrated in lower quarter and outer corners. Quiet upper central area for black Korean text to be typeset later. No letters, numbers, symbols, sketches, props or medieval parchment.”
+
+적용: 수문 위치 값 3~4는 열림, 2는 하강 중, 1은 좁은 틈, 0은 닫힘. 각인·단서 문구·번호·천공 상태는 게임 데이터로 표시한다. 새 질감은 기존 prop-paper.webp를 대체하며, 오래된 주소가 캐시에 남지 않도록 clue-paper.webp로 이름을 바꿨다.

@@ -1,6 +1,6 @@
 /* Direct actions replace narrated solutions. No real-time failure timers. */
 (function(root){
-const D=root.YKData,N=D.nodes,W=root.YKWorld;D.build='8.2.0-contact';
+const D=root.YKData,N=D.nodes,W=root.YKWorld;D.build='8.3.1-inspection';
 N.arrival.audioProfile='silence';N.look.audioProfile='silence';N.bolt.audioProfile='silence';
 N.door.lines[0].text='문 앞의 사람은 얼굴을 문틀 바깥에 둔 채 손만 내민다. 손에는 접수증이, 손목 뒤에는 작은 금속 접수판이 달려 있다. 젖은 바닥에 발자국은 보이지 않는다.';
 D.endings.flood.title='차오른 물';D.endings.flood.text=['바닥의 물이 계단까지 밀려온다. 학교 쪽 배관에서 깨지는 소리가 나고, 서진이 되돌아오다 위층에서 멈춘다. 돌아갈 문 아래로도 물이 들어온다.','도윤이 손잡이에 매달린다. 다친 손이 풀리면서 몸이 아래로 꺾인다. 팔을 잡지만 발을 디딜 곳이 사라진다. 수신기가 물 위로 떠오른다. 잡으려던 손을 놓고 도윤의 옷깃을 움켜쥔다.'];
@@ -27,13 +27,13 @@ root.mountGamePlay=K=>{mount(K);const add=(r,...flags)=>{for(const f of flags)if
  if(action==='inspect'){if(q.inspected)return false;q.inspected=true;q.feedback=p.id==='door'?'손목 뒤 금속 접수판에 마이크 구멍이 있다. 질문이 들릴 때마다 붉은 점이 켜진다. 손은 종이가 들어갈 만큼 벌어져 있다.':p.id==='sea'?'잠금 화살표는 시계 방향이다. 창밖 물살은 바다에서 건물 안으로 밀려온다.':p.id==='trail'?'체육관 방향 바닥에 작은 운동화 자국이 이어진다. 노란 우비 실밥이 철망에 걸려 있다. 새 화살표 쪽에는 바퀴 자국만 있다.':'수호에게 문을 잡아 달라고 한다. 그가 먼저 손잡이를 잡는다. “열까요?” 창에서는 대기 장소를 바꾸지 않는다는 말만 돌아온다.';const fact=D.observationDefinitions[fieldFacts[p.id][0]];r.observations??=[];if(!r.observations.some(o=>o.id===fact.id))r.observations.push({...fact,text:q.feedback});return true;}
  if(p.id==='door'&&['paper','voice'].includes(action)){q.committed=true;add(r,'doorProof');if(action==='voice'){add(r,'voiceTaken');r.erosion=Math.min(100,r.erosion+8);}else add(r,'silentNumber');return {route:'number'};}
  if(p.id==='sea'){
-  if(['close','open'].includes(action)){q.gap=Math.max(0,Math.min(4,q.gap+(action==='close'?-1:1)));if(action==='open'){q.wrong++;r.erosion=Math.min(100,r.erosion+4);}q.feedback=q.gap===0?'해원이 손전등을 내린다. “틈 안 보여요. 물도 안 들어와요.”':action==='open'?'수문이 더 벌어진다. 바닥의 물이 학교 방향 배관으로 밀려간다. 도윤이 손잡이를 가리킨다. “반대요. 지금 더 들어와요.”':'수문이 조금 내려간다. 해원이 손전등을 틈에 맞춘다. “아직 열려 있어요.”';if(q.wrong>=3){q.committed=true;add(r,'seaFailed');return {route:'flood'};}return true;}
+  if(['close','open'].includes(action)){if(action==='close'&&q.gap===0)return false;q.gap=Math.max(0,Math.min(4,q.gap+(action==='close'?-1:1)));if(action==='open'){q.wrong++;r.erosion=Math.min(100,r.erosion+4);}q.feedback=q.gap===0?'해원이 손전등을 내린다. “틈 안 보여요. 물도 안 들어와요.”':action==='open'?'수문이 더 벌어진다. 바닥의 물이 학교 방향 배관으로 밀려간다. 도윤이 손잡이를 가리킨다. “반대요. 지금 더 들어와요.”':'수문이 조금 내려간다. 해원이 손전등을 틈에 맞춘다. “아직 열려 있어요.”';if(q.wrong>=3){q.committed=true;add(r,'seaFailed');return {route:'flood'};}return true;}
   if(action==='submit'){if(q.gap!==0)return false;q.committed=true;add(r,'seaAligned');return {route:'seal'};}
  }return false;
  };
 };
 // Two-way contact: information unavailable outside, then a physical response.
-D.build='8.2.0-contact';
+D.build='8.3.1-inspection';
 N.manifestSignal.lines.push({who:'',text:'앞서 내뱉은 말이 바깥 스피커에서 한 번 더 돌아온다. 선장이 휴대기를 가리킨다. “그것도 여기에 적어 주세요. 제 무전기에는 연결하지 말고요.”',if:'voiceLeak'});
 N.classroomHall.lines=[{who:'',text:'복도에 문이 세 개 남아 있다. 이름표는 모두 떨어졌다. 왼쪽 문에서는 세 번씩 두드리는 소리가 나고, 가운데 문 아래에는 가느다란 틈이 있다. 오른쪽 문은 걸레로 막혀 있다.'},{who:'서진',text:'안에 누구 있어요?'},{who:'',text:'대답 대신 수신기의 통화 표시등이 켜진다. 스피커에 숨소리가 한 번 걸린다. 문을 두드리던 소리가 멎는다.'}];
 N.classroomHall.choices[0].puzzle='contactLocated';N.classroomHall.choices[0].label='반응을 확인한 문으로 간다';N.classroomHall.choices[1].label='두드리는 소리만 따라 왼쪽 문으로 간다';
@@ -42,26 +42,26 @@ N.doyunDoor.lines[3].text='왼손이 끼었어요. 문 아래 받침부터 넣�
 N.doyunDoor.lines[4].text='접이식 의자가 복도 벽에 기대 있다. 안쪽에서 금속이 구르는 소리가 난다. 선반 뒤는 틈이 좁아 보이지 않는다.';
 N.braceShelf.lines=[{who:'',text:'의자를 밀어 넣자 선반이 멈춘다. 안쪽 남자가 손을 빼내지만 문을 조금 움직일 때마다 통이 구른다. 나래가 문을 붙든다.'},{who:'나래',text:'제가 잡을게요. 안에 뭐가 걸렸는지 물어봐 주세요.'},{who:'',text:'창틀 옆에 가위가 있다. 두꺼운 커튼 끝을 잘라 긴 띠를 만든다. 문틈으로는 통 손잡이만 보인다. 뒤쪽에서 수신기에 마찰음이 들어온다.'}];N.braceShelf.choices[0].puzzle='loadSecured';N.braceShelf.choices[0].label='고정한 통을 확인하고 문을 연다';
 N.schoolPass.lines=N.schoolPass.lines.filter(l=>!l.text.includes('다른 근거가 생긴다')&&!l.text.includes('뒤쪽 교실에서 같은 말'));
-N.echoClass.lines=[{who:'',text:'왼쪽 문 앞에 서자 두드림이 멎는다. 방 안에서는 방금 들은 숨소리만 반복된다. 불을 비춰도 의자들은 움직이지 않는다.'},{who:'서진',text:'밖에 서 있는 건 아는 걸까요?'},{who:'',text:'수신기의 통화 표시가 다시 깜박인다. 가운데 문 아래에서 작은 쇳소리가 난다.'}];N.echoClass.choices=[{id:'return',label:'복도로 물러나 통화 표시를 확인한다',to:'classroomHall',erosion:6}];
+N.echoClass.lines=[{who:'',text:'왼쪽 문 앞에 서자 두드림이 멎는다. 방 안에서는 방금 들은 숨소리만 반복된다. 불을 비춰도 의자들은 움직이지 않는다.'},{who:'서진',text:'밖에 서 있는 건 아는 걸까요?'},{who:'',text:'수신기의 통화 표시가 다시 깜박인다. 가운데 문 아래에서 작은 쇳소리가 난다.'}];N.classroomHall.choices.find(c=>c.id==='echo').unless='hallEchoSeen';N.echoClass.choices=[{id:'return',label:'복도로 물러나 통화 표시를 확인한다',to:'classroomHall',flags:['hallEchoSeen'],erosion:6}];
 N.doyunStory.lines.unshift({who:'',text:'남자가 약 상자에서 낡은 수신기를 꺼낸다. 화면 한쪽 모서리가 눌려 있다. “이걸로 계속 불렀어요. 밖에서 받아 주셔서 다행이에요.”',if:'liveRescue'});
 N.treatment.lines.push({who:'',text:'손바닥의 까진 곳에 약이 닿자 따갑다. 의자는 버텼지만, 통이 미끄러질 때 놓친 자국이 남았다.',if:'shelfScrape'});
 for(const [id,title,place]of [['contactDoor','빛에 응답한 문',N.classroomHall.place],['loadAnchor','안쪽에서 확인한 선반 기둥',N.braceShelf.place]])D.observationDefinitions[id]={id,title,place,text:''};
 const liveID=r=>r.node==='classroomHall'?'hall':r.node==='braceShelf'?'rescue':null;
 root.validateContact=r=>{if(r.contactState!==undefined){if(!r.contactState||typeof r.contactState!=='object'||Array.isArray(r.contactState))throw Error('교신 상태가 올바르지 않습니다.');for(const [id,q]of Object.entries(r.contactState)){if(!['hall','rescue'].includes(id)||!q||typeof q!=='object'||typeof q.tuned!=='boolean'||typeof q.inspected!=='boolean'||typeof q.committed!=='boolean'||!['off','left','middle','right'].includes(q.beam)||!Array.isArray(q.log)||q.log.length>12||q.log.some(t=>typeof t!=='string'||t.length>1000)||!Array.isArray(q.heard)||q.heard.some(t=>typeof t!=='string')||!Array.isArray(q.errors)||q.errors.some(t=>!['left','right','handle'].includes(t))||q.feedback!==undefined&&typeof q.feedback!=='string'||q.reply!==undefined&&typeof q.reply!=='string'||q.anchor!==undefined&&typeof q.anchor!=='boolean'||q.secured!==undefined&&typeof q.secured!=='boolean')throw Error('교신 행동 기록이 올바르지 않습니다.');}}
- if(r.subjective!==undefined&&(!Array.isArray(r.subjective)||r.subjective.length>12||r.subjective.some(x=>!x||!D.nodes[x.node]||!['pending','ground','off','answer'].includes(x.state))))throw Error('침식 반응 기록이 올바르지 않습니다.');};
+ if(r.subjective!==undefined&&(!Array.isArray(r.subjective)||r.subjective.length>12||r.subjective.some(x=>!x||!D.nodes[x.node]||!['pending','ground','off','answer'].includes(x.state)||x.acknowledged!==undefined&&typeof x.acknowledged!=='boolean')))throw Error('침식 반응 기록이 올바르지 않습니다.');};
 const previousMount=root.mountGamePlay;
 root.mountGamePlay=K=>{previousMount(K);const flag=(r,f)=>{if(!r.flags.includes(f))r.flags.push(f);};const remember=(r,id,text)=>{r.observations??=[];if(!r.observations.some(x=>x.id===id))r.observations.push({...D.observationDefinitions[id],text});};
  K.contact=r=>{const id=liveID(r);if(!id||r.ending||r.explore)return null;r.contactState??={};r.contactState[id]??={tuned:false,inspected:false,committed:false,beam:'off',log:[],heard:[],errors:[]};return {id,state:r.contactState[id]};};
  K.contactAct=(r,action)=>{const p=K.contact(r);if(!p||p.state.committed)return false;const q=p.state;if(K.subjective(r)?.state==='pending')return false;
- if(action==='tune'){if(q.tuned)return false;q.tuned=true;r.flags=r.flags.filter(f=>f!=='channelPaused');r.erosion=Math.min(100,r.erosion+2);q.reply=p.id==='hall'?'……들리세요? 양호실 안이에요. 문이 안 열려요. 밖은 안 보입니다. 문 밑으로 불 좀 비춰 주세요.':'선반 뒤쪽은 제가 볼 수 있어요. 통 손잡이만 잡으면 옆으로 돌아요. 몸통을 감아서 뒤의 기둥에 묶어 주세요. 기둥 쪽은 제가 받을게요.';if(p.id==='rescue')q.anchor=true;q.log.push(q.reply);return true;}
- if(action==='check'&&q.tuned&&p.id==='hall'&&!q.heard.includes(q.beam)){q.heard.push(q.beam);q.reply=q.beam==='middle'?'불 들어왔어요. 제가 손으로 가릴게요. 지금요.':q.beam==='off'?'아직 어두워요. 불은 켜셨나요?':'여기는 불 안 들어와요. 옆 문인가 봐요. 왼쪽에서…… 제 목소리가 들리는데요.';q.log.push(q.reply);return true;}
+ if(action==='tune'){if(q.tuned)return false;q.tuned=true;r.flags=r.flags.filter(f=>f!=='channelPaused');r.erosion=Math.min(100,r.erosion+2);q.reply=p.id==='hall'?'……들리세요? 양호실 안이에요. 문이 안 열려요. 밖은 안 보입니다. 문 밑으로 불 좀 비춰 주세요.':'선반 뒤쪽은 제가 볼 수 있어요. 통 손잡이만 잡으면 옆으로 돌아요. 몸통을 감아서 뒤의 기둥에 묶어 주세요. 기둥 쪽은 제가 받을게요.';if(p.id==='rescue')q.anchor=true;q.feedback=p.id==='hall'?'문 안에서 불빛을 기다린다고 한다. 손전등을 켜고 세 문 아래의 틈을 본다.':'안쪽 사람이 띠를 받을 준비를 한다. 나래가 문을 붙든 채 기다린다.';q.log.push(q.reply);return true;}
+ if(action==='check'&&q.tuned&&p.id==='hall'&&!q.heard.includes(q.beam)){q.heard.push(q.beam);q.reply=q.beam==='middle'?'불 들어왔어요. 제가 손으로 가릴게요. 지금요.':q.beam==='off'?'아직 어두워요. 불은 켜셨나요?':'여기는 불 안 들어와요. 옆 문인가 봐요. 왼쪽에서…… 제 목소리가 들리는데요.';q.feedback=q.beam==='middle'?'안쪽에서 빛을 가려 보겠다는 답이 온다. 손전등을 움직이지 않고 문 아래를 들여다본다.':'불이 들어오지 않는다는 답이 온다. 나래가 옆 문 아래를 가리킨다.';q.log.push(q.reply);return true;}
  return false;};
  const previousField=K.field,previousAct=K.fieldAct;
  K.field=r=>{const p=K.contact(r);return p?{...p,id:p.id}:previousField(r);};
  K.fieldAct=(r,action)=>{const p=K.contact(r);if(!p)return previousAct(r,action);const q=p.state;if(r.page<K.lines(r).length-1||q.committed||K.subjective(r)?.state==='pending')return false;
  if(p.id==='hall'){
  if(['left','middle','right','off'].includes(action)){if(q.beam===action)return false;q.beam=action;q.feedback=action==='off'?'손전등을 내린다. 복도 끝의 두드림이 다시 시작된다.':action==='middle'?'가운데 문 아래로 불빛을 밀어 넣는다. 문 안에서 무언가 움직인다.':'문틈으로 불을 비춘다. 왼쪽 문에서 아까와 같은 두드림이 난다.';if(['left','right'].includes(action)&&!q.errors.includes(action)){q.errors.push(action);r.erosion=Math.min(100,r.erosion+4);}return true;}
- if(action==='inspect'){q.inspected=true;if(q.beam==='middle'&&q.heard.includes('middle')){q.feedback='손전등은 켜져 있는데 문 아래 빛이 끊긴다. 다섯 손가락 그림자가 한 번 벌어졌다 오므라든다. 수신기에서 “다시 뗄게요”가 들리고 빛이 돌아온다.';flag(r,'contactLocated');remember(r,'contactDoor',q.feedback);}else q.feedback='문 아래를 들여다본다. 안쪽에서 빛을 가리는 반응은 아직 없다. 수신기에는 통화 표시가 남아 있다.';return true;}}
+ if(action==='inspect'){q.inspected=true;if(q.beam==='middle'&&q.heard.includes('middle')){q.feedback='손전등은 켜져 있는데 문 아래 빛이 끊긴다. 다섯 손가락 그림자가 한 번 벌어졌다 오므라든다. 수신기에서 “다시 뗄게요”가 들리고 빛이 돌아온다.';q.committed=true;flag(r,'contactLocated');remember(r,'contactDoor',q.feedback);}else q.feedback='문 아래를 들여다본다. 안쪽에서 빛을 가리는 반응은 아직 없다. 수신기에는 통화 표시가 남아 있다.';return true;}}
  if(p.id==='rescue'){
  if(action==='handle'){if(q.errors.includes('handle'))return false;q.errors.push('handle');flag(r,'shelfScrape');r.erosion=Math.min(100,r.erosion+6);q.feedback='손잡이에 띠를 걸자 통이 옆으로 돌아간다. 문 가장자리에 손바닥이 쓸린다. 나래가 체중을 실어 문을 붙든다. “잠깐, 멈춰요.”';return true;}
  if(action==='body'){if(!q.anchor){q.feedback='몸통에는 띠를 걸 수 있지만 반대쪽을 묶을 자리가 보이지 않는다. 안쪽에서 통을 붙들고 있다.';return true;}q.secured=true;q.feedback='통 몸통을 감아 띠를 밀어 넣는다. 안쪽에서 기둥 뒤로 띠가 돌아 나온다. 당기자 통이 더 굴러오지 않는다.';return true;}

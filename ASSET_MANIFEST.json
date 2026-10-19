@@ -50,6 +50,11 @@
     "sha256": "a71f8347488fe7f54880965c2e210a82f83c62f2e0c8bab466792ae064849f3a"
   },
   {
+    "path": "assets/clue-paper.webp",
+    "bytes": 139598,
+    "sha256": "ac2b6e66b2ce2b2b56a58f45fd2e47ca9efc7e716308bc90a8f49c826e838015"
+  },
+  {
     "path": "assets/doyun.webp",
     "bytes": 91688,
     "sha256": "9e5935045ec2ff9b97db7d29873522aa16999b0664ce51fc3a5d9fdbc27608fe"
@@ -195,11 +200,6 @@
     "sha256": "1f5554d8593dbf176a249afc91cb13dd8c5d6c97eb30fe34752236f7978395ed"
   },
   {
-    "path": "assets/prop-paper.webp",
-    "bytes": 82512,
-    "sha256": "c39552209360478c997040d82a0d5eef894397ab835c4b81fb9ab991dfc89396"
-  },
-  {
     "path": "assets/relay.webp",
     "bytes": 253416,
     "sha256": "b965cefabfdb5601e85b4b1f03cb2f62f2f2ebde0d0f44b510d3272a01cb7fb3"
@@ -233,6 +233,26 @@
     "path": "assets/seojin.webp",
     "bytes": 103010,
     "sha256": "babfb4bb25455b173c32efbb13cd921e072f66b668c0efaedb165938c848dde1"
+  },
+  {
+    "path": "assets/sluice-closed.webp",
+    "bytes": 287308,
+    "sha256": "14372de57539c9d61b610778fb69bade972cbc452fff2397cb30bea27a70391e"
+  },
+  {
+    "path": "assets/sluice-moving.webp",
+    "bytes": 257884,
+    "sha256": "427bacdbcb72f8e2ebf46d4212d729707d343d3d3a71119d9d63fef5b9ddf7b3"
+  },
+  {
+    "path": "assets/sluice-narrow.webp",
+    "bytes": 273940,
+    "sha256": "44dc9b4848131c8148f6033f889c8560364ec67ab1274a046be25259f1f5cb53"
+  },
+  {
+    "path": "assets/sluice-open.webp",
+    "bytes": 285210,
+    "sha256": "bc5227dc4965cad2b36eff785935f33768bfb30d5eea66d8fbcab543bc10ed63"
   },
   {
     "path": "assets/station.webp",
