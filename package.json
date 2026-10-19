@@ -1,6 +1,6 @@
 {
   "name": "janhyang-beta",
-  "version": "7.5.0-beta",
+  "version": "8.2.0-contact",
   "private": true,
   "scripts": {
     "test": "node verify.cjs",

@@ -1,0 +1,71 @@
+{
+  "build": "8.2.0-contact",
+  "errors": [],
+  "missing": [],
+  "views": [
+    {
+      "width": 320,
+      "height": 568
+    },
+    {
+      "width": 390,
+      "height": 844
+    },
+    {
+      "width": 844,
+      "height": 390
+    },
+    {
+      "width": 1280,
+      "height": 800
+    }
+  ],
+  "actions": 72,
+  "ending": "together",
+  "checks": [
+    "two-way live contact plus physical light response",
+    "rescue interior instruction and load test",
+    "subjective intrusion rendered outside receiver",
+    "receiver off actually pauses and reconnects",
+    "all scene actions reachable by scrolling in four viewports",
+    "full route with actual UI workbenches",
+    "home clears subjective effects",
+    "eight existing music files decode"
+  ],
+  "musicDecoded": [
+    {
+      "file": "room",
+      "duration": 59.0865306122449
+    },
+    {
+      "file": "coast",
+      "duration": 59.21634920634921
+    },
+    {
+      "file": "school",
+      "duration": 118.70673469387755
+    },
+    {
+      "file": "water",
+      "duration": 103.53845804988661
+    },
+    {
+      "file": "archive",
+      "duration": 88.76514739229025
+    },
+    {
+      "file": "dawn",
+      "duration": 59.0865306122449
+    },
+    {
+      "file": "threat",
+      "duration": 105.78365079365079
+    },
+    {
+      "file": "signal",
+      "duration": 120.5528798185941
+    }
+  ],
+  "humanAuditioned": false,
+  "realDevice": false
+}

@@ -32,7 +32,7 @@ const events=[
  event('carrierScratch','hatch closedPier familyPhoto treatment clinicRadio haewonAccount pumpDrain lightCheck departureRecord archiveRoom archiveLabel archiveDesk archiveReply archiveMap archiveOutside quietShelter quietWalk naraAfterRest harborReturn manifestDesk manifestPeople manifestSignal','빈 수신 칸에 짧은 선이 스쳤다.',{kind:'carrier'})
 ];
 const byId=Object.fromEntries(events.map(e=>[e.id,e]));
-function eligible(r){return !!r&&!r.ending&&!r.explore&&r.flags.includes('doorPassed')&&!N[r.node].encounter&&events.some(e=>e.nodes.includes(r.node));}
+function eligible(r){return !!r&&!r.ending&&!r.explore&&!r.flags.includes('channelPaused')&&r.flags.includes('doorPassed')&&!N[r.node].encounter&&events.some(e=>e.nodes.includes(r.node));}
 const initial=()=>({checked:[],used:[],entries:[],chapterCounts:{},count:0,lastAt:0});
 function state(r){return r.interference??=initial();}
 function candidates(r){return events.filter(e=>e.nodes.includes(r.node)&&(!e.flag||r.flags.includes(e.flag))&&r.erosion>=(e.minErosion||0)&&!(r.interference?.used||[]).includes(e.id));}

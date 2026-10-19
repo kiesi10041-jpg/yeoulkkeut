@@ -1,26 +1,135 @@
-[
-  {
-    "file": "assets/audio/coast.mp3",
-    "seconds": 96.0,
-    "peak": 0.45570993423461914,
-    "clipping": false
-  },
-  {
-    "file": "assets/audio/room.mp3",
-    "seconds": 96.0,
-    "peak": 0.32561275362968445,
-    "clipping": false
-  },
-  {
-    "file": "assets/audio/signal.mp3",
-    "seconds": 96.0,
-    "peak": 0.3047565817832947,
-    "clipping": false
-  },
-  {
-    "file": "assets/audio/threat.mp3",
-    "seconds": 96.0,
-    "peak": 0.37884145975112915,
-    "clipping": false
-  }
-]
+{
+  "build": "8.1.0-play",
+  "tracks": [
+    {
+      "file": "assets/audio/room.mp3",
+      "source": "silence_01.ogg",
+      "composer": "Kenten Fina",
+      "license": "CC BY 3.0",
+      "sourcePage": "https://opengameart.org/content/horror-soundtrack-8-tracks-tech-rooms",
+      "duration": 59.115102,
+      "bytes": 456954,
+      "sha256": "9ab342658608e1c2a524d248d8f85541a9517399b87dd76bfb963d198a08c09f",
+      "changes": "OGG to MP3, 44.1 kHz, loudness normalisation and 80 ms entry fade",
+      "humanAuditioned": false,
+      "decodedMeasurement": {
+        "I": "-20.3",
+        "Peak": "-11.4"
+      }
+    },
+    {
+      "file": "assets/audio/coast.mp3",
+      "source": "silence_02.ogg",
+      "composer": "Kenten Fina",
+      "license": "CC BY 3.0",
+      "sourcePage": "https://opengameart.org/content/horror-soundtrack-8-tracks-tech-rooms",
+      "duration": 59.245714,
+      "bytes": 930154,
+      "sha256": "f700b14a02362567be8401d679ad824239b27eb46de1fac7753b576ec82096b4",
+      "changes": "OGG to MP3, 44.1 kHz, loudness normalisation and 80 ms entry fade",
+      "humanAuditioned": false,
+      "decodedMeasurement": {
+        "I": "-21.2",
+        "Peak": "-5.9"
+      }
+    },
+    {
+      "file": "assets/audio/school.mp3",
+      "source": "amb_01.ogg",
+      "composer": "Kenten Fina",
+      "license": "CC BY 3.0",
+      "sourcePage": "https://opengameart.org/content/horror-soundtrack-8-tracks-tech-rooms",
+      "duration": 118.752653,
+      "bytes": 1720325,
+      "sha256": "13bf6e1faf7705d0e4e351518b56476b5f85a2ac216690a9e16712e64f8ed804",
+      "changes": "OGG to MP3, 44.1 kHz, loudness normalisation and 80 ms entry fade",
+      "humanAuditioned": false,
+      "decodedMeasurement": {
+        "I": "-20.3",
+        "Peak": "-8.4"
+      }
+    },
+    {
+      "file": "assets/audio/water.mp3",
+      "source": "amb_02.ogg",
+      "composer": "Kenten Fina",
+      "license": "CC BY 3.0",
+      "sourcePage": "https://opengameart.org/content/horror-soundtrack-8-tracks-tech-rooms",
+      "duration": 103.57551,
+      "bytes": 1310864,
+      "sha256": "a067d29260105583d87d6f6db69e3ceb75a98869ac3cdd9d5ac528abb7f30455",
+      "changes": "OGG to MP3, 44.1 kHz, loudness normalisation and 80 ms entry fade",
+      "humanAuditioned": false,
+      "decodedMeasurement": {
+        "I": "-20.7",
+        "Peak": "-9.9"
+      }
+    },
+    {
+      "file": "assets/audio/archive.mp3",
+      "source": "amb_03.ogg",
+      "composer": "Kenten Fina",
+      "license": "CC BY 3.0",
+      "sourcePage": "https://opengameart.org/content/horror-soundtrack-8-tracks-tech-rooms",
+      "duration": 88.816327,
+      "bytes": 1235610,
+      "sha256": "2fd80a54cca834de35d71b9b2a78c7f83875437c5e7846a63ce47ba407caf5e8",
+      "changes": "OGG to MP3, 44.1 kHz, loudness normalisation and 80 ms entry fade",
+      "humanAuditioned": false,
+      "decodedMeasurement": {
+        "I": "-20.4",
+        "Peak": "-8.0"
+      }
+    },
+    {
+      "file": "assets/audio/dawn.mp3",
+      "source": "silence_03.ogg",
+      "composer": "Kenten Fina",
+      "license": "CC BY 3.0",
+      "sourcePage": "https://opengameart.org/content/horror-soundtrack-8-tracks-tech-rooms",
+      "duration": 59.115102,
+      "bytes": 882756,
+      "sha256": "f513147dd47b42e3749e79d33b19f3fd77f1db52164694df8451de356fb89ae8",
+      "changes": "OGG to MP3, 44.1 kHz, loudness normalisation and 80 ms entry fade",
+      "humanAuditioned": false,
+      "decodedMeasurement": {
+        "I": "-20.7",
+        "Peak": "-4.0"
+      }
+    },
+    {
+      "file": "assets/audio/threat.mp3",
+      "source": "action_01.ogg",
+      "composer": "Kenten Fina",
+      "license": "CC BY 3.0",
+      "sourcePage": "https://opengameart.org/content/horror-soundtrack-8-tracks-tech-rooms",
+      "duration": 105.822041,
+      "bytes": 1860393,
+      "sha256": "0304cd0cdf46755f1677f9344595ae78a3cf33738a8380bf893b18e0ceb9bd67",
+      "changes": "OGG to MP3, 44.1 kHz, loudness normalisation and 80 ms entry fade",
+      "humanAuditioned": false,
+      "decodedMeasurement": {
+        "I": "-19.9",
+        "Peak": "-5.7"
+      }
+    },
+    {
+      "file": "assets/audio/signal.mp3",
+      "source": "action_02.ogg",
+      "composer": "Kenten Fina",
+      "license": "CC BY 3.0",
+      "sourcePage": "https://opengameart.org/content/horror-soundtrack-8-tracks-tech-rooms",
+      "duration": 120.581224,
+      "bytes": 2135788,
+      "sha256": "461e67cea76eb64f0e2b9e0e7c179be3c595b4c3d4f5dc2e16177ec329314487",
+      "changes": "OGG to MP3, 44.1 kHz, loudness normalisation and 80 ms entry fade",
+      "humanAuditioned": false,
+      "decodedMeasurement": {
+        "I": "-20.9",
+        "Peak": "-5.3"
+      }
+    }
+  ],
+  "listeningQualityVerified": false,
+  "measurement": "ffmpeg decoded MP3 ebur128; not human listening"
+}

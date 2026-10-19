@@ -1,20 +1,20 @@
 {
-  "build": "7.5.0",
+  "build": "8.2.0-contact",
   "scope": "first complete campaign, early setbacks excluded",
   "humanTimed": false,
   "renderedBrowserVerified": true,
-  "totalScenes": 97,
+  "totalScenes": 100,
   "totalEndings": 12,
   "completeEndings": 6,
   "setbackEndings": 6,
-  "totalAuthoredCharacters": 40835,
+  "totalAuthoredCharacters": 37640,
   "representativeDirectRoute": {
     "ending": "together",
     "chapters": 9,
     "uniqueScenes": 65,
     "actionSelections": 72,
-    "textBlocks": 531,
-    "displayedCharacters": 31193,
+    "textBlocks": 494,
+    "displayedCharacters": 27934,
     "visited": [
       "arrival",
       "bolt",
@@ -93,15 +93,15 @@
   "readingOnlyModels": [
     {
       "assumedCharactersPerMinute": 350,
-      "minutes": 89.1
+      "minutes": 79.8
     },
     {
       "assumedCharactersPerMinute": 500,
-      "minutes": 62.4
+      "minutes": 55.9
     },
     {
       "assumedCharactersPerMinute": 650,
-      "minutes": 48
+      "minutes": 43
     }
   ],
   "notes": [

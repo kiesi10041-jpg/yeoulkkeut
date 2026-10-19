@@ -1,6 +1,7 @@
 {
-  "passed": 27,
+  "passed": 28,
   "checks": [
+    "browser boot guard agrees with engine and content build",
     "all authored scene, choice, art and ending references resolve",
     "full first-run route visits all nine campaign chapters and ends with honest handoff",
     "old two-minute pier and cabinet shortcut nodes are absent",
@@ -26,7 +27,7 @@
     "save roundtrip preserves full campaign, replay and chapter state",
     "old-build, invalid pages and malformed chat imports are rejected",
     "ending state rejects further actions, questions and page changes",
-    "representative direct full route retains over 30000 displayed characters after removing repeated explanations with no wait gates",
+    "core story progression does not use real-time wait gates",
     "school dialogue obeys its own no-name rule before leaving the building"
   ]
 }

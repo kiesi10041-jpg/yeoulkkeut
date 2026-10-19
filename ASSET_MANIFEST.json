@@ -6,43 +6,43 @@
   },
   {
     "path": "assets/audio/archive.mp3",
-    "bytes": 1152909,
-    "sha256": "34a1802c574e8e3d7ac7f6ab1102d33ebae430a5e765742c3cf5260f3d7fa2b9"
+    "bytes": 1235610,
+    "sha256": "2fd80a54cca834de35d71b9b2a78c7f83875437c5e7846a63ce47ba407caf5e8"
   },
   {
     "path": "assets/audio/coast.mp3",
-    "bytes": 1152909,
-    "sha256": "cfeb88d2c6870b593e63efbaece9b45270dec108ab3e80a2ca0b3c7e57a90ad3"
+    "bytes": 930154,
+    "sha256": "f700b14a02362567be8401d679ad824239b27eb46de1fac7753b576ec82096b4"
   },
   {
     "path": "assets/audio/dawn.mp3",
-    "bytes": 1152909,
-    "sha256": "696cd1e25196c25493c51adae44129b9f11f6f2d0ee845c8f13a23279d9e9cc0"
+    "bytes": 882756,
+    "sha256": "f513147dd47b42e3749e79d33b19f3fd77f1db52164694df8451de356fb89ae8"
   },
   {
     "path": "assets/audio/room.mp3",
-    "bytes": 1152909,
-    "sha256": "b105b7745e74aa31f67c726fc8ce2264cb6022305438adb92589bbb70e3a241c"
+    "bytes": 456954,
+    "sha256": "9ab342658608e1c2a524d248d8f85541a9517399b87dd76bfb963d198a08c09f"
   },
   {
     "path": "assets/audio/school.mp3",
-    "bytes": 1152909,
-    "sha256": "cc4d91216a34a3a553a71228be086d02d2d2f3b44d7538b06d53cf31e1d2098d"
+    "bytes": 1720325,
+    "sha256": "13bf6e1faf7705d0e4e351518b56476b5f85a2ac216690a9e16712e64f8ed804"
   },
   {
     "path": "assets/audio/signal.mp3",
-    "bytes": 1152909,
-    "sha256": "d6a895d895de32e930449a743f9e0cb67e2cf54a20f41fbd8ab33d9e31b9a518"
+    "bytes": 2135788,
+    "sha256": "461e67cea76eb64f0e2b9e0e7c179be3c595b4c3d4f5dc2e16177ec329314487"
   },
   {
     "path": "assets/audio/threat.mp3",
-    "bytes": 1152909,
-    "sha256": "9760c8839ef9e3aabe055a91860a8f3220960ad98ebf05583c30e42f8c16bc20"
+    "bytes": 1860393,
+    "sha256": "0304cd0cdf46755f1677f9344595ae78a3cf33738a8380bf893b18e0ceb9bd67"
   },
   {
     "path": "assets/audio/water.mp3",
-    "bytes": 1152909,
-    "sha256": "27cbe36e8e5681d20984337700b2eb4f8043dde0d5a1fb6f37c82462769157df"
+    "bytes": 1310864,
+    "sha256": "a067d29260105583d87d6f6db69e3ceb75a98869ac3cdd9d5ac528abb7f30455"
   },
   {
     "path": "assets/clinic.webp",
@@ -120,6 +120,11 @@
     "sha256": "c3580fc755fc9ee24b06b2c29af8b193abf1e0ca0df3f452522a9527bfdc00be"
   },
   {
+    "path": "assets/ferry-interruption.webp",
+    "bytes": 203496,
+    "sha256": "18f22adc2d1a7d339864350f657aec58357eb5ea83001fa84543d1897334ef30"
+  },
+  {
     "path": "assets/flood-rescue.webp",
     "bytes": 130776,
     "sha256": "01f99bebe80847389da4c3299e2581bd968c43f1ff23952bc9fcb3b1e9f56836"
@@ -165,6 +170,11 @@
     "sha256": "93c78f8f3db0455abff7440b995f46a55fe26aa4aeb2cac4f8eba268b57617e3"
   },
   {
+    "path": "assets/nara-wrist.webp",
+    "bytes": 118802,
+    "sha256": "b6b210835f5e6bc1674e38cef96335d0d938259f43e1469c9556021cec46925b"
+  },
+  {
     "path": "assets/nara.webp",
     "bytes": 119630,
     "sha256": "959a1bb807e577a872fe30542f308a81a626912b6829d85ef275f6eaf59fe2c5"
@@ -198,6 +208,16 @@
     "path": "assets/reservoir.webp",
     "bytes": 256556,
     "sha256": "c8c5579051ca41f582552e7a6f6ca1b8d0e6afaccd2f80cc0123f130257eee7f"
+  },
+  {
+    "path": "assets/school-pledge.webp",
+    "bytes": 153434,
+    "sha256": "85b10d9bf780a3cf8a885e9173210b4bb2e0ea06e3c29cdb14f1711f1ed8d34c"
+  },
+  {
+    "path": "assets/school-separated.webp",
+    "bytes": 142474,
+    "sha256": "91f3e4395a97d1e0bdfdee47329cf0439ef41b3128ee344ac9d91d51a1fcf9aa"
   },
   {
     "path": "assets/school-warden.webp",

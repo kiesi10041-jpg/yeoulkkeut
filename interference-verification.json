@@ -1,5 +1,5 @@
 {
-  "passed": 10,
+  "passed": 11,
   "checks": [
     "first contact, active encounters, exploration and endings cannot emit",
     "a missed random opportunity cannot be rerolled by reopening the receiver",
@@ -10,6 +10,7 @@
     "both wordless carrier traces and meaningful messages can occur",
     "old saves and preferences migrate; malformed entries are rejected",
     "chance produces a mixture, rather than a mandatory event in every scene",
-    "invasive replies that speak for the player require higher erosion"
+    "invasive replies that speak for the player require higher erosion",
+    "paused receiver cannot emit and manual reconnection restores eligibility"
   ]
 }
