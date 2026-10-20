@@ -6,43 +6,48 @@
   },
   {
     "path": "assets/audio/archive.mp3",
-    "bytes": 1235610,
-    "sha256": "2fd80a54cca834de35d71b9b2a78c7f83875437c5e7846a63ce47ba407caf5e8"
+    "bytes": 840665,
+    "sha256": "1509d223a685597613d035495faa581a9cf89ee8756c61cebe0c1694fa21e405"
   },
   {
     "path": "assets/audio/coast.mp3",
-    "bytes": 930154,
-    "sha256": "f700b14a02362567be8401d679ad824239b27eb46de1fac7753b576ec82096b4"
+    "bytes": 840665,
+    "sha256": "2a5ffa78ba1d1d6919e83849810907725b1f161094b972e61d89b205456cfabf"
   },
   {
     "path": "assets/audio/dawn.mp3",
-    "bytes": 882756,
-    "sha256": "f513147dd47b42e3749e79d33b19f3fd77f1db52164694df8451de356fb89ae8"
+    "bytes": 840665,
+    "sha256": "3e227e725712daba8e70a9bccc06985786d244bcf47b5f6385c13bcbdeaecbbb"
   },
   {
     "path": "assets/audio/room.mp3",
-    "bytes": 456954,
-    "sha256": "9ab342658608e1c2a524d248d8f85541a9517399b87dd76bfb963d198a08c09f"
+    "bytes": 840665,
+    "sha256": "b857ebd1ff3b83d0271348e3a7c176e520203826783e948f176725b8970d272c"
   },
   {
     "path": "assets/audio/school.mp3",
-    "bytes": 1720325,
-    "sha256": "13bf6e1faf7705d0e4e351518b56476b5f85a2ac216690a9e16712e64f8ed804"
+    "bytes": 840665,
+    "sha256": "0f46bd54a21f7fdc779c30522108219520dbb10647b9d2193d37d416273ed1da"
   },
   {
     "path": "assets/audio/signal.mp3",
-    "bytes": 2135788,
-    "sha256": "461e67cea76eb64f0e2b9e0e7c179be3c595b4c3d4f5dc2e16177ec329314487"
+    "bytes": 840665,
+    "sha256": "dd6937e7df52e14b25c82f90a6b0c73dc76166299b90e30d6525d234a957fa2f"
   },
   {
     "path": "assets/audio/threat.mp3",
-    "bytes": 1860393,
-    "sha256": "0304cd0cdf46755f1677f9344595ae78a3cf33738a8380bf893b18e0ceb9bd67"
+    "bytes": 840665,
+    "sha256": "9852cf5360e6426cf69cf7d0a363c7a44c9272f237f0a04c1b44108e345d8b8b"
   },
   {
     "path": "assets/audio/water.mp3",
-    "bytes": 1310864,
-    "sha256": "a067d29260105583d87d6f6db69e3ceb75a98869ac3cdd9d5ac528abb7f30455"
+    "bytes": 840665,
+    "sha256": "0fb5bc3d3d9901da6610b0af6f384f763aec57bd52822075a312d5797a0f6935"
+  },
+  {
+    "path": "assets/circuit-open.webp",
+    "bytes": 219932,
+    "sha256": "04f4f77bd1bf248e814c3f28cd86af9f3cd53cd66283d15e41aab799f0ec6893"
   },
   {
     "path": "assets/clinic.webp",
@@ -283,5 +288,20 @@
     "path": "assets/village-map.webp",
     "bytes": 328682,
     "sha256": "02171114e56f37e389e8888d5d5d34b356ff0d8d95ee8a8e3695c3c97f62fe82"
+  },
+  {
+    "path": "assets/warehouse-drain.webp",
+    "bytes": 251970,
+    "sha256": "66eb7e77c53fd56ce6a37559b3c856e24745b9a33c7eb948b88512782866fc82"
+  },
+  {
+    "path": "assets/warehouse-drained.webp",
+    "bytes": 219270,
+    "sha256": "a0abe39cf46f9333e4b0c03df6321653b35cfbe76441f95f57c3921d18df3667"
+  },
+  {
+    "path": "assets/warehouse-initial.webp",
+    "bytes": 219676,
+    "sha256": "3c203022f8ee76482ec356efd81a2bf57e6a0e24edb960043819e5f4caac36ad"
   }
 ]

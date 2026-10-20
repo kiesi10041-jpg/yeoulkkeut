@@ -1,6 +1,6 @@
 /* Direct actions replace narrated solutions. No real-time failure timers. */
 (function(root){
-const D=root.YKData,N=D.nodes,W=root.YKWorld;D.build='8.3.1-inspection';
+const D=root.YKData,N=D.nodes,W=root.YKWorld;D.build='8.4.0-field';
 N.arrival.audioProfile='silence';N.look.audioProfile='silence';N.bolt.audioProfile='silence';
 N.door.lines[0].text='문 앞의 사람은 얼굴을 문틀 바깥에 둔 채 손만 내민다. 손에는 접수증이, 손목 뒤에는 작은 금속 접수판이 달려 있다. 젖은 바닥에 발자국은 보이지 않는다.';
 D.endings.flood.title='차오른 물';D.endings.flood.text=['바닥의 물이 계단까지 밀려온다. 학교 쪽 배관에서 깨지는 소리가 나고, 서진이 되돌아오다 위층에서 멈춘다. 돌아갈 문 아래로도 물이 들어온다.','도윤이 손잡이에 매달린다. 다친 손이 풀리면서 몸이 아래로 꺾인다. 팔을 잡지만 발을 디딜 곳이 사라진다. 수신기가 물 위로 떠오른다. 잡으려던 손을 놓고 도윤의 옷깃을 움켜쥔다.'];
@@ -33,7 +33,7 @@ root.mountGamePlay=K=>{mount(K);const add=(r,...flags)=>{for(const f of flags)if
  };
 };
 // Two-way contact: information unavailable outside, then a physical response.
-D.build='8.3.1-inspection';
+D.build='8.4.0-field';
 N.manifestSignal.lines.push({who:'',text:'앞서 내뱉은 말이 바깥 스피커에서 한 번 더 돌아온다. 선장이 휴대기를 가리킨다. “그것도 여기에 적어 주세요. 제 무전기에는 연결하지 말고요.”',if:'voiceLeak'});
 N.classroomHall.lines=[{who:'',text:'복도에 문이 세 개 남아 있다. 이름표는 모두 떨어졌다. 왼쪽 문에서는 세 번씩 두드리는 소리가 나고, 가운데 문 아래에는 가느다란 틈이 있다. 오른쪽 문은 걸레로 막혀 있다.'},{who:'서진',text:'안에 누구 있어요?'},{who:'',text:'대답 대신 수신기의 통화 표시등이 켜진다. 스피커에 숨소리가 한 번 걸린다. 문을 두드리던 소리가 멎는다.'}];
 N.classroomHall.choices[0].puzzle='contactLocated';N.classroomHall.choices[0].label='반응을 확인한 문으로 간다';N.classroomHall.choices[1].label='두드리는 소리만 따라 왼쪽 문으로 간다';
@@ -67,8 +67,75 @@ root.mountGamePlay=K=>{previousMount(K);const flag=(r,f)=>{if(!r.flags.includes(
  if(action==='body'){if(!q.anchor){q.feedback='몸통에는 띠를 걸 수 있지만 반대쪽을 묶을 자리가 보이지 않는다. 안쪽에서 통을 붙들고 있다.';return true;}q.secured=true;q.feedback='통 몸통을 감아 띠를 밀어 넣는다. 안쪽에서 기둥 뒤로 띠가 돌아 나온다. 당기자 통이 더 굴러오지 않는다.';return true;}
  if(action==='test'){if(!q.secured){q.feedback='문을 조금 움직이자 통이 다시 구른다. 나래가 문을 잡은 채 고개를 젓는다.';return true;}q.committed=true;flag(r,'loadSecured');flag(r,'liveRescue');remember(r,'loadAnchor','교신 상대가 뒤 기둥으로 띠를 돌려주었다. 몸통을 감아 고정한 뒤 문을 움직여도 통이 구르지 않았다.');return {route:'out'};}}
  return false;};
- K.subjective=r=>{if(!r||r.ending||r.explore)return null;r.subjective??=[];const old=r.subjective.find(x=>x.node===r.node);if(old)return old;if(r.erosion<35)return null;const important=['classroomHall','schoolPatrol','braceShelf','pumpSeaView','powerPanel','manifestPeople'].includes(r.node);if(!important||r.page<K.lines(r).length-1)return null;const entry={node:r.node,state:'pending'};r.subjective.push(entry);return entry;};
+ K.subjective=r=>{if(!r||r.ending||r.explore)return null;r.subjective??=[];const old=r.subjective.find(x=>x.node===r.node);if(old)return old;if(r.erosion<50)return null;const important=['classroomHall','schoolPatrol','braceShelf','pumpSeaView','powerPanel','manifestPeople'].includes(r.node);if(!important||r.page<K.lines(r).length-1)return null;const entry={node:r.node,state:'pending'};r.subjective.push(entry);return entry;};
  K.resolveSubjective=(r,action)=>{const s=K.subjective(r);if(!s||s.state!=='pending'||!['ground','off','answer'].includes(action))return false;s.state=action;r.erosion=Math.max(0,Math.min(100,r.erosion+({ground:-3,off:-5,answer:8})[action]));if(action==='answer')flag(r,'voiceLeak');if(action==='off'){flag(r,'channelPaused');const p=K.contact(r);if(p)p.state.tuned=false;}return true;};
  const previousChoose=K.choose;K.resumeChosen=(r,m,id)=>{if(['door','waiting'].includes(r.node)&&id==='number')flag(r,'doorProof');if(r.node==='pumpSeaView'&&id==='seal')flag(r,'seaAligned');if(r.node==='classroomHall'&&id==='hinge')flag(r,'contactLocated');if(r.node==='braceShelf'&&id==='out')flag(r,'loadSecured');return previousChoose(r,m,id);};K.choose=(r,m,id)=>K.subjective(r)?.state==='pending'?false:previousChoose(r,m,id);
 };
+})(globalThis);
+
+/* Field revision: observable erosion, prepared departure and knowledge routes. */
+(function(root){
+const D=root.YKData,N=D.nodes,W=root.YKWorld;
+const add=(r,f)=>{if(!r.flags.includes(f))r.flags.push(f);};
+D.erosionStages=[
+ {min:0,name:'안정',sign:'내가 누른 말과 받은 말이 구분된다.',effect:'수신 기록과 현장 원본을 따로 확인할 수 있다.'},
+ {min:25,name:'잔상',sign:'방금 받은 글자가 대화 가장자리에 남는다.',effect:'원본은 변하지 않는다. 새 수신인지 도착 기록을 확인하자.'},
+ {min:50,name:'간섭',sign:'보내지 않은 답이 입에 맴돌고 손끝이 먼저 움직인다.',effect:'주요 조작 전에 말을 멈추거나 회선을 끊는 대응이 필요하다.'},
+ {min:75,name:'동조',sign:'내 말이 바깥 스피커에서도 이어지고 손을 혼자 멈추기 어렵다.',effect:'출항 전 동료와 접촉을 확인하고 수신기를 차폐해야 한다. 혼자 복구했다고 선언할 수 없다.'}
+];
+// The creature carries the failed attendance procedure, rather than an unexplained enemy.
+N.schoolGate.lines.push({who:'',text:'현관 옆 대피조 사진에서 얼굴마다 작은 번호표가 붙어 있다. 출석부 맨 끝에는 귀가 확인 칸이 비어 있다. 복도 스피커가 “확인되지 않은 인원은 교실에서 대기”를 반복한다.'});
+N.schoolPass.lines.push({who:'',text:'명부의 귀가 확인 칸에 구멍 셋이 뚫려 있다. 복도 형체도 같은 세 칸을 짚고 물러났다. 서진이 출입표를 접어 챙긴다. 교실 안에서는 아직 종이 울린다.'});
+N.doyunStory.lines.push({who:'도윤',text:'부두 설비 점검하다가 여기 전원 보러 왔어요. 밖으로 나가려면 제 공구 가방도 필요해요. 들고 나와 주시면 길은 제가 볼게요.'});
+N.haewonAccount.lines.push({who:'서진',text:'해원이는 제가 데려갈게요. 배 뜨는 곳까진 같이 가요. 그 뒤엔 조사보다 애부터 쉬게 할 거예요.'});
+N.departureRecord.lines.push({who:'윤서',text:'외부 선은 분리했어요. 내부 호출은 제가 여기서 받을게요. 먼저 가세요. 사람 더 오면 그쪽 연락 번호로 보낼게요.',unless:'yunseoJoined'},{who:'윤서',text:'차단기는 묶었고, 왜 껐는지 종이도 붙였어요. 제 수신기는 따로 들게요. 같이 나가요.',if:'yunseoJoined'});
+N.manifestPeople.lines.push({who:'',text:'윤서가 헤드폰을 가방에 넣고 인원표에 자기 번호를 적는다. 꺼 둔 중계실의 열쇠는 선장에게 넘긴다.',if:'yunseoJoined'});
+const crew=D.crewMembers;D.crewMembers=r=>[...crew(r),...(r.flags.includes('yunseoJoined')?[{id:'yunseo',name:'윤서',portrait:'operator.webp',item:'헤드폰 · 중계실 열쇠 · 차단 기록',before:'차단기를 고정하고 현관에 분리 사유를 남긴 뒤 함께 나왔다.',action:'중계실에 남겨 둔 회선 상태를 묻는다',after:'“내부 회선도 껐어요. 다시 켤 때 볼 기록은 문에 붙였고요.” 가방에서 뽑힌 단자를 보여 준다.',image:null}]:[])];
+D.evidenceRoutes={side:'school:hinge',seaFirst:'reservoir:pipe',service:'archive:route',harbor:'relay:wires',tool:'school:hinge'};
+// Every ending knowledge now provides a concrete action, not only a locked sentence.
+const route=(node,id,label,to,knowledge,extra={})=>N[node].choices.push({id,label,to,requires:knowledge,...extra});
+const scene=(id,place,art,lines,choices,region)=>{N[id]={place,art,mood:'quiet',lines:lines.map(text=>({who:'',text})),choices};W.regions[id]=region;};
+scene('calendarExit','대기실 · 접수대 뒤','hall.webp',['벽의 달력을 들추자 같은 날짜의 접수증이 묶여 있다. 뒤쪽 창은 광장으로 나 있다. 사람 키보다 낮고 바깥 빗장은 없다.'],[{id:'window',label:'창문 잠금을 풀고 나래와 광장으로 나온다',to:'squareArrival',flags:['calendarEvidence','doorPassed','metNara']}],'square');
+route('room','backWindow','접수대 뒤 창문의 잠금을 살핀다','calendarExit','date');
+scene('schoolSide','학교 · 체육관 외벽','school.webp',['철망 아래에 노란 우비 실밥이 걸려 있다. 작은 운동화 자국은 배수시설 쪽으로 가지만, 양호실 창 아래에는 성인 한 명의 발자국이 들어간 뒤 나오지 않았다.'],[{id:'rescue',label:'실종된 아이의 흔적을 남기고 양호실 창으로 간다',to:'classroomHall',flags:['schoolEntry','joinedSeojin','sideRouteTaken']}],'school');
+route('mapChoice','side','체육관 외벽을 따라 양호실 창을 확인한다','schoolSide','number');
+scene('braceTools','학교 · 복도 공구함','school.webp',['문 아래 선반의 부러진 받침과 공구함의 짧은 버팀목 길이를 비교한다. 접이식 의자보다 낮아 문을 조금 더 움직일 수 있다. 안쪽 사람에게 소리 대신 버팀목을 두드려 위치를 알린다.'],[{id:'fit',label:'버팀목을 문 아래에 맞추고 안쪽 응답을 받는다',to:'braceShelf',flags:['braced','braceToolUsed']}],'school');
+route('doyunDoor','tool','공구함에서 선반 받침과 맞는 버팀목을 찾는다','braceTools','brace');
+scene('seaFirst','배수시설 · 바다 쪽 창','reservoir.webp',['창고 문으로 가지 않고 바깥 창에 먼저 선다. 바다 쪽 수문 아래로 물이 밀려든다. 도윤이 회색 우회관은 창고 문 앞, 이 수문은 바닷물 유입을 막는 장치라고 짚는다.'],[{id:'gate',label:'바다 쪽 수문 손잡이를 조작한다',to:'pumpSeaView',flags:['seaFirstRoute']}],'reservoir');
+route('storeLevel','seaFirst','창고를 열기 전에 바다 쪽 유입부터 확인한다','seaFirst','flow', {unless:'seaSealed'});
+N.pumpSeaView.choices.find(c=>c.id==='seal').routeByFlag={flag:'seaFirstRoute',yes:'storeLevel',no:'pumpAir'};
+N.pumpOverview.choices.push({id:'already',label:'앞서 닫은 수문을 확인하고 공기 밸브로 간다',to:'pumpAir',flag:'seaSealed'});
+N.pumpOverview.choices.find(c=>c.id==='window').unless='seaSealed';
+scene('marketService','시장 · 뒤편 배수로','market.webp',['매대 앞의 흰 선은 천 밑에서 끊긴다. 뒤편 배수로 위에는 고정된 철판이 이어져 있다. 수호가 접은 지도를 대 보고, 서진은 해원 손을 잡은 채 첫 철판을 밟는다.'],[{id:'cross',label:'고정 볼트를 확인하고 일행을 한 명씩 건넨다',to:'marketCross',flags:['marketRouteSafe','serviceRouteTaken']}],'market');
+route('marketArrival','service','매대 뒤편 배수로의 철판을 확인한다','marketService','market');
+scene('earlyIsolation','중계실 · 항구 출력 단자','relay.webp',['도착지 호출선과 공용 안내선이 나란히 묶여 있다. 윤서가 호출선을 따로 잡고 기다린다. 커넥터의 표시를 맞춰 공용 안내 출력만 분리할 수 있다.'],[{id:'disconnect',label:'윤서의 호출은 남기고 공용 안내 출력을 분리한다',to:'departureRecord',flags:['outsideIsolated','harborIsolationPrepared','relayComplete']}],'relay');
+route('yunseoChoice','harbor','항구로 나가는 공용 안내선을 따로 추적한다','earlyIsolation','handoff');
+route('yunseoChoice','trace','반복되는 내 목소리의 외부 출력을 추적한다','earlyIsolation','timing');
+route('lastWaiting','origin','원본의 호출과 자동 안내를 분리해 다시 조사한다','sourceApproach','origin');
+N.sourceSocket.choices.push({id:'private',label:'공용 방송 대신 확인한 장소별 호출 기록을 남긴다',to:'end:anchor',requires:'origin',flags:['privateOriginRecord']});
+
+N.crossingIncident.choices.find(c=>c.id==='secure').label='시동을 끄고 장치와 동료의 자리를 다시 확인한다';
+const mount=root.mountGamePlay;root.mountGamePlay=K=>{mount(K);
+ const interact=K.interact;K.interact=(r,a,v)=>{const out=interact(r,a,v);if(out&&r.node==='storeLevel'&&['open','watch','close'].includes(a)){const q=r.puzzles.water;q.feedback=a==='open'?'밸브를 돌리자 오른쪽 배수구에서 물이 나온다. 문틈의 물살이 조금 약해졌다.':a==='watch'?(q.inside===q.outside?'안쪽 수면이 내려와 바깥 물자국과 나란해졌다. 손잡이가 더는 손을 밀지 않는다.':'안쪽 수면이 아직 더 높다. 배수구로 물이 흐른다.'):(q.inside===q.outside?'밸브를 잠그자 배수구의 물이 멎는다. 문 양쪽 수면은 같은 높이에 남았다.':'배수는 멎었지만 안쪽 수면이 아직 높다.');}return out;};
+ const available=K.available;K.available=(r,m)=>{const base=available(r,m);if(r.ending||r.explore)return base;const evidence={side:'school:hinge',seaFirst:'reservoir:pipe',service:'archive:route',harbor:'relay:wires',tool:'school:hinge'};for(const c of N[r.node].choices){if(evidence[c.id]&&r.worldNotes.includes(evidence[c.id])&&!base.some(x=>x.id===c.id)&&(!c.unless||!r.flags.includes(c.unless)))base.push(c);}return base;};
+ K.erosionStage=r=>{const i=r.erosion>=75?3:r.erosion>=50?2:r.erosion>=25?1:0;return {index:i,...D.erosionStages[i]};};
+ K.departure=r=>{if(!r||r.ending||!['outerCheck','crossingIncident'].includes(r.node))return null;r.puzzles.departure??={device:false,nara:null,doyun:null,child:null,call:false,ground:false};return r.puzzles.departure;};
+ K.prepare=(r,action)=>{const q=K.departure(r);if(!q||r.page<K.lines(r).length-1||K.subjective(r)?.state==='pending')return false;
+ if(action==='revise'){q.nara=q.doyun=q.child=null;q.call=false;r.flags=r.flags.filter(f=>f!=='departureReady');return true;}
+ const roles={rear:['nara','naraFront',false],front:['nara','naraFront',true],rail:['doyun','doyunStairs',false],stairs:['doyun','doyunStairs',true],family:['child','childSeparated',false],separate:['child','childSeparated',true]};
+ if(roles[action]){const [key,f,bad]=roles[action];if(q[key]===action)return false;q[key]=action;r.flags=r.flags.filter(x=>x!==f);if(bad)add(r,f);q.call=false;}
+ else{if(!['device','call','ground'].includes(action)||q[action]&&action!=='ground')return false;if(action==='ground'&&r.erosion<75)return false;if(action==='call'&&(!q.device||!q.nara||!q.doyun||!q.child))return false;q[action]=true;
+ if(action==='device'){add(r,'channelPaused');add(r,'departureShielded');}
+ if(action==='ground'){r.erosion=Math.max(0,Math.min(60,r.erosion-20));add(r,'assistedGrounding');add(r,'channelPaused');}}
+ r.flags=r.flags.filter(f=>f!=='departureReady');if(q.device&&q.nara&&q.doyun&&q.child&&q.call&&r.erosion<75)add(r,'departureReady');r.page=K.lines(r).length-1;return true;};
+ const choose=K.choose;K.choose=(r,m,id)=>{if(r.node==='outerCheck'&&id==='prepare')return false;if((r.node==='outerCheck'&&id==='travel'||r.node==='crossingIncident'&&id==='secure')&&(!r.flags.includes('departureReady')||r.erosion>=75||r.node==='crossingIncident'&&['naraFront','doyunStairs','childSeparated'].some(f=>r.flags.includes(f))))return false;
+ if(r.page>=K.lines(r).length-1&&r.erosion>=75&&(r.node==='boardingPlan'&&id==='bypass'||r.node==='crossingIncident'&&id==='pushOn')){const c=N[r.node].choices.find(x=>x.id===id),old=c.routeByFlag;c.routeByFlag={flag:'selfSignalLeaked',yes:'end:carry',no:'end:carry'};add(r,'selfSignalLeaked');try{return choose(r,m,id);}finally{c.routeByFlag=old;}}
+ const from=r.node,ok=choose(r,m,id);if(ok&&from==='outerCheck'&&r.node==='crossingIncident'){const p=K.departure(r);p.nara=p.doyun=p.child=null;p.call=false;r.flags=r.flags.filter(f=>f!=='departureReady');}
+ if(ok&&from==='pumpSeaView'&&id==='seal'&&r.flags.includes('seaFirstRoute')){r.flags=r.flags.filter(f=>f!=='seaFirstRoute');add(r,'seaSealed');}
+ if(ok&&from==='pumpOverview'&&id==='already')add(r,'seaSealed');return ok;};
+ const resolve=K.resolveSubjective;K.resolveSubjective=(r,a)=>{if(a==='assist'){const q=K.subjective(r);if(!q||q.state!=='pending'||r.erosion<75)return false;const ok=resolve(r,'off');if(ok){r.erosion=Math.max(0,r.erosion-11);add(r,'assistedGrounding');}return ok;}return resolve(r,a);};
+ const validate=root.validateContact;root.validateContact=r=>{validate(r);const q=r.puzzles?.departure;if(q&&(!q||typeof q!=='object'||['device','call','ground'].some(k=>typeof q[k]!=='boolean')||q&&[['nara',['rear','front']],['doyun',['rail','stairs']],['child',['family','separate']]].some(([k,v])=>q[k]!==null&&!v.includes(q[k]))))throw Error('출항 준비 기록이 올바르지 않습니다.');};
+};
+const endingText=D.endingText;D.endingText=r=>r.ending==='carry'&&r.flags.includes('selfSignalLeaked')?['배가 움직인다. 나래의 수신기는 꺼져 있다. 그런데 선장 무전기에서 네가 방금 한 말이 이어진다. 입을 막자 목 안쪽이 떨린다.','항구 스피커가 켜진다. 도착지 담당자가 무전기를 끄고 손짓하지만, 맞은편 정류장에도 같은 말이 뜬다. 신호가 남은 사람은 나래만이 아니었다.','차폐함은 네 자리 옆에 비어 있다. 시동을 끄고 함께 손을 확인할 시간도 있었다. 육지는 가까워지는데, 네 목소리가 먼저 건너간다.']:endingText(r);
+D.build='8.4.0-field';
 })(globalThis);

@@ -70,3 +70,37 @@ Use case: product-mockup. Asset type: game interface background plate, exactly f
 - assets/clue-paper.webp: “Full-bleed blank offwhite 1990s office paper, orthographic top down, fine cellulose fibers, soft central fold, blue-gray damp tidemarks concentrated in lower quarter and outer corners. Quiet upper central area for black Korean text to be typeset later. No letters, numbers, symbols, sketches, props or medieval parchment.”
 
 적용: 수문 위치 값 3~4는 열림, 2는 하강 중, 1은 좁은 틈, 0은 닫힘. 각인·단서 문구·번호·천공 상태는 게임 데이터로 표시한다. 새 질감은 기존 prop-paper.webp를 대체하며, 오래된 주소가 캐시에 남지 않도록 clue-paper.webp로 이름을 바꿨다.
+
+
+## Archived EPILOGUE_ART.md
+
+# 두 번의 신호 · 결말 이미지
+
+내장 imagegen으로 기존 나래 초상을 정체성·의상 참고로 사용해 생성함. assets/ending-two-taps.webp에 통합함. 마지막에 약속을 기억하는 선택을 하고 together 결말을 맞으면 표시함.
+
+## 생성 프롬프트
+
+Use case: illustration-story. Asset type: emotional epilogue illustration for an original Korean coastal horror game. Input reference is Nara identity and costume only: preserve her short dark hair, tired Korean face, weathered charcoal field jacket. Wide cinematic scene inside a modest small coastal evacuation boat in very early blue dawn, Nara seated beside a narrow window on the right half, breathing quietly and looking toward the unseen player with a restrained small relieved expression, her fingertips resting on a metal railing as though she has just tapped twice. In the lower foreground, only the anonymous player's ordinary hand rests a short distance away on the same railing; NOT holding her hand, not romantic. A folded worn paper checklist beside her, an unpowered portable text receiver lying face down, grey sea through the window and faint warm light from shore far away. Focus is an ordinary human response after a frightening night, bittersweet quiet, not triumphant, not a monster reveal. Detailed painterly realistic game art, consistent face, subtle cold and amber palette, center-safe crop includes Nara face and both separate hands and rail. No readable text, no UI, no logos, no extra fingers, no blood, no watermark.
+
+
+## Archived RECEIVER_ART.md
+
+# v6.2.2 수신기 제작
+
+내장 imagegen으로 생성하고 RGBA WebP로 변환해 assets/receiver-hardware.webp에 통합. 실제 방송은 HTML로 표시해 텍스트의 접근성과 읽기 크기를 유지함.
+
+최종 생성 프롬프트:
+
+Use case: product-mockup. Asset type: game UI background plate for a Korean coastal folk horror game's portable emergency text receiver. Front orthographic view of ONE rugged handheld receiver filling a portrait 2:3 canvas almost edge to edge (device outer edges at x3%-97%, y2%-98%), isolated on transparent background. Detailed worn dark olive gray painted metal, screws at corners, thick rubber protective edging, a short antenna top left, amber indicator jewel upper right, small unlettered riveted manufacturer plate. LARGE blank dark green rectangular LCD occupying x12%-88%, y18%-56%, perfectly frontal, absolutely no text inside it because live game text will be overlaid. Below screen small tape inspection slot, large knurled tuning dial lower right around x75% y76%, tactile push-to-talk switch lower left, speaker perforations along bottom. Restrained realistic painterly game asset, tangible weathered materials and warm edge light, no hands, no people, no scene, no logos, no letters, no numbers, no decorative sci-fi holograms. Keep device silhouette readable at mobile width 320px.
+
+
+## v8.4 raster field assets
+
+Built-in image generation, realistic painterly Korean coastal horror, no embedded writing/UI. Exact lettering and state captions remain selectable DOM text. Art prompts and invariants:
+
+- `assets/warehouse-initial.webp`: frontal old closed steel warehouse door, high water in sightglass, low grey bypass valve and outlet, separate larger sea pipe. Initial valve closed, no outlet stream.
+- `assets/warehouse-drain.webp`: same door, pipe and valve layout, water drains at low outlet. High inside water.
+- `assets/warehouse-drained.webp`: preserve original framing and equipment; only lower sightglass water and remove outlet stream. Wet still floor. Low-open state overlays flow using game state; low-closed state removes that overlay.
+- `assets/circuit-open.webp`: open old cabinet, upper/lower levers, blank brass plates, crossed cloth wiring, emergency lamp upper right and microphone unit lower right. Hardware detail is atmosphere; exact traced endpoint evidence is supplied by the inspected wire readout.
+
+Source resolution 1536×1024, distributed WebP 1440×960 quality 84. Generation source PNGs are not part of the game package.

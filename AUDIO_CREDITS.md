@@ -1,22 +1,20 @@
-# Music credits
+# 잔향 04:17 — v8.4 환경 음악
 
-Music by **Kenten Fina**.
+이번 배포본의 MP3 8개는 프로젝트용으로 절차적으로 작곡·합성한 새 트랙이다. 외부 샘플을 사용하지 않았다. 기존 Kenten Fina 트랙은 이번 배포본에서 교체되었다.
 
-Original pack: [Horror Soundtrack (8 Tracks) — Tech Rooms](https://opengameart.org/content/horror-soundtrack-8-tracks-tech-rooms).
+각 트랙 84초, 스테레오 MP3 80kbps, 44.1kHz, 목표 -24 LUFS/-3dBTP, 진입 3초·종료 5초 페이드.
 
-License: [Creative Commons Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/) (CC BY 3.0).
-
-| Game file | Original track |
+| 파일 | 구성 |
 |---|---|
-| assets/audio/room.mp3 | silence_01.ogg |
-| assets/audio/coast.mp3 | silence_02.ogg |
-| assets/audio/school.mp3 | amb_01.ogg |
-| assets/audio/water.mp3 | amb_02.ogg |
-| assets/audio/archive.mp3 | amb_03.ogg |
-| assets/audio/dawn.mp3 | silence_03.ogg |
-| assets/audio/threat.mp3 | action_01.ogg |
-| assets/audio/signal.mp3 | action_02.ogg |
+| room | 57·60·64·59 음의 느린 구절, 작은 실내 공기 |
+| coast | 50·57·60·64 음, 긴 쉼과 해안 공기 |
+| school | 69·70·64·65 음, 불안정한 반음과 긴 침묵 |
+| water | 45·52·57·55 음, 낮은 공명과 배수시설 질감 |
+| archive | 57·64·60·59·55 음, 짧은 건반 구절 |
+| dawn | 53·60·64·67·65·60 음, 긴장 완화 |
+| threat | 45·46·52·45 음, 불규칙한 낮은 반복 |
+| signal | 57·58·64·59 음, 반음 잔향 |
 
-Changes: OGG sources transcoded to MP3, 44.1 kHz, loudness normalized to a target of -21 LUFS / -2 dB true peak with an 80 ms entry fade. The game also adjusts playback gain and fades cues in and out. Composition remains the author's work. Credit is also available from Settings → 음원 크레딧.
+MIDI 음높이 표기. 다섯 배음의 감쇠 합성, 결정적 난수 seed 417~424, 실내 반사 0.19/0.43/0.83초. 게임에서는 장면 전환 시 교차 페이드하며 효과음 순간 음악을 낮춘다.
 
-Retain attribution and license information when distributing these music files. No endorsement of this game by the composer is implied. Procedural sound effects in app.js are separate from these music tracks.
+자동 디코딩과 파형·음량 검사는 음악의 예술적 적합성 또는 실제 iPhone 청취 검증을 대신하지 않는다.

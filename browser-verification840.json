@@ -1,0 +1,280 @@
+{
+  "build": "8.4.0-field",
+  "method": "headless Chromium rendered browser; desktop emulation, not real iPhone",
+  "checks": [
+    {
+      "view": {
+        "width": 320,
+        "height": 568
+      },
+      "boxes": {
+        "stage": {
+          "x": 0,
+          "y": 48,
+          "right": 320,
+          "bottom": 228,
+          "width": 320,
+          "height": 180
+        },
+        "figure": {
+          "x": 156.40625,
+          "y": 54,
+          "right": 310,
+          "bottom": 222,
+          "width": 153.59375,
+          "height": 168
+        },
+        "title": {
+          "x": 14,
+          "y": 172.3125,
+          "right": 147.203125,
+          "bottom": 218,
+          "width": 133.203125,
+          "height": 45.6875
+        },
+        "tool": {
+          "x": 12,
+          "y": 58,
+          "right": 136.453125,
+          "bottom": 102,
+          "width": 124.453125,
+          "height": 44
+        },
+        "pseudo": "none"
+      },
+      "settingsOverflow": false,
+      "musicAdvanced": true,
+      "waterThreeStates": true,
+      "fourErosionStages": true,
+      "assistedDeparture": true
+    },
+    {
+      "view": {
+        "width": 390,
+        "height": 724
+      },
+      "boxes": {
+        "stage": {
+          "x": 0,
+          "y": 48,
+          "right": 390,
+          "bottom": 265.1875,
+          "width": 390,
+          "height": 217.1875
+        },
+        "figure": {
+          "x": 192.8125,
+          "y": 54,
+          "right": 380,
+          "bottom": 259.1875,
+          "width": 187.1875,
+          "height": 205.1875
+        },
+        "title": {
+          "x": 14,
+          "y": 209.5,
+          "right": 179.40625,
+          "bottom": 255.1875,
+          "width": 165.40625,
+          "height": 45.6875
+        },
+        "tool": {
+          "x": 12,
+          "y": 58,
+          "right": 136.453125,
+          "bottom": 102,
+          "width": 124.453125,
+          "height": 44
+        },
+        "pseudo": "none"
+      },
+      "settingsOverflow": false,
+      "musicAdvanced": true,
+      "waterThreeStates": true,
+      "fourErosionStages": true,
+      "assistedDeparture": true
+    },
+    {
+      "view": {
+        "width": 430,
+        "height": 820
+      },
+      "boxes": {
+        "stage": {
+          "x": 0,
+          "y": 48,
+          "right": 430,
+          "bottom": 294,
+          "width": 430,
+          "height": 246
+        },
+        "figure": {
+          "x": 213.609375,
+          "y": 54,
+          "right": 420,
+          "bottom": 288,
+          "width": 206.390625,
+          "height": 234
+        },
+        "title": {
+          "x": 14,
+          "y": 238.3125,
+          "right": 197.8125,
+          "bottom": 284,
+          "width": 183.8125,
+          "height": 45.6875
+        },
+        "tool": {
+          "x": 12,
+          "y": 58,
+          "right": 136.453125,
+          "bottom": 102,
+          "width": 124.453125,
+          "height": 44
+        },
+        "pseudo": "none"
+      },
+      "settingsOverflow": false,
+      "musicAdvanced": true,
+      "waterThreeStates": true,
+      "fourErosionStages": true,
+      "assistedDeparture": true
+    },
+    {
+      "view": {
+        "width": 844,
+        "height": 390
+      },
+      "boxes": {
+        "stage": {
+          "x": 0,
+          "y": 42,
+          "right": 295.390625,
+          "bottom": 338,
+          "width": 295.390625,
+          "height": 296
+        },
+        "figure": {
+          "x": 141.609375,
+          "y": 50,
+          "right": 283.390625,
+          "bottom": 330,
+          "width": 141.78125,
+          "height": 280
+        },
+        "title": {
+          "x": 18,
+          "y": 297,
+          "right": 135.890625,
+          "bottom": 322,
+          "width": 117.890625,
+          "height": 25
+        },
+        "tool": {
+          "x": 12,
+          "y": 52,
+          "right": 124.40625,
+          "bottom": 96,
+          "width": 112.40625,
+          "height": 44
+        },
+        "pseudo": "none"
+      },
+      "settingsOverflow": false,
+      "musicAdvanced": true,
+      "waterThreeStates": true,
+      "fourErosionStages": true,
+      "assistedDeparture": true
+    },
+    {
+      "view": {
+        "width": 1280,
+        "height": 800
+      },
+      "boxes": {
+        "stage": {
+          "x": 0,
+          "y": 58,
+          "right": 655.546875,
+          "bottom": 800,
+          "width": 655.546875,
+          "height": 742
+        },
+        "figure": {
+          "x": 328.890625,
+          "y": 66,
+          "right": 643.546875,
+          "bottom": 792,
+          "width": 314.65625,
+          "height": 726
+        },
+        "title": {
+          "x": 18,
+          "y": 718,
+          "right": 301.5625,
+          "bottom": 784,
+          "width": 283.5625,
+          "height": 66
+        },
+        "tool": {
+          "x": 12,
+          "y": 68,
+          "right": 168.484375,
+          "bottom": 112,
+          "width": 156.484375,
+          "height": 44
+        },
+        "pseudo": "none"
+      },
+      "settingsOverflow": false,
+      "musicAdvanced": true,
+      "waterThreeStates": true,
+      "fourErosionStages": true,
+      "assistedDeparture": true
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "fullRoute": {
+    "actions": 72,
+    "ending": "together"
+  },
+  "music": {
+    "decoded": [
+      {
+        "file": "room",
+        "duration": 84
+      },
+      {
+        "file": "coast",
+        "duration": 84
+      },
+      {
+        "file": "school",
+        "duration": 84
+      },
+      {
+        "file": "water",
+        "duration": 84
+      },
+      {
+        "file": "archive",
+        "duration": 84
+      },
+      {
+        "file": "dawn",
+        "duration": 84
+      },
+      {
+        "file": "threat",
+        "duration": 84
+      },
+      {
+        "file": "signal",
+        "duration": 84
+      }
+    ],
+    "humanAuditioned": false,
+    "realDevice": false
+  }
+}
