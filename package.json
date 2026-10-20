@@ -1,6 +1,6 @@
 {
   "name": "janhyang-beta",
-  "version": "8.4.0-field",
+  "version": "8.5.0-revision",
   "private": true,
   "scripts": {
     "test": "node verify.cjs",
@@ -9,7 +9,8 @@
     "test:play": "node play-verification.cjs",
     "test:world": "node world-verification.cjs",
     "test:continuity": "node continuity-verification.cjs",
-    "test:interference": "node interference-verification.cjs"
+    "test:interference": "node interference-verification.cjs",
+    "test:revision": "node revision-verification.cjs"
   },
   "devDependencies": {
     "jsdom": "26.1.0"

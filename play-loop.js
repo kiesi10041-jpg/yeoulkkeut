@@ -1,6 +1,6 @@
 /* Direct actions replace narrated solutions. No real-time failure timers. */
 (function(root){
-const D=root.YKData,N=D.nodes,W=root.YKWorld;D.build='8.4.0-field';
+const D=root.YKData,N=D.nodes,W=root.YKWorld;D.build='8.5.0-revision';
 N.arrival.audioProfile='silence';N.look.audioProfile='silence';N.bolt.audioProfile='silence';
 N.door.lines[0].text='문 앞의 사람은 얼굴을 문틀 바깥에 둔 채 손만 내민다. 손에는 접수증이, 손목 뒤에는 작은 금속 접수판이 달려 있다. 젖은 바닥에 발자국은 보이지 않는다.';
 D.endings.flood.title='차오른 물';D.endings.flood.text=['바닥의 물이 계단까지 밀려온다. 학교 쪽 배관에서 깨지는 소리가 나고, 서진이 되돌아오다 위층에서 멈춘다. 돌아갈 문 아래로도 물이 들어온다.','도윤이 손잡이에 매달린다. 다친 손이 풀리면서 몸이 아래로 꺾인다. 팔을 잡지만 발을 디딜 곳이 사라진다. 수신기가 물 위로 떠오른다. 잡으려던 손을 놓고 도윤의 옷깃을 움켜쥔다.'];
@@ -33,7 +33,7 @@ root.mountGamePlay=K=>{mount(K);const add=(r,...flags)=>{for(const f of flags)if
  };
 };
 // Two-way contact: information unavailable outside, then a physical response.
-D.build='8.4.0-field';
+D.build='8.5.0-revision';
 N.manifestSignal.lines.push({who:'',text:'앞서 내뱉은 말이 바깥 스피커에서 한 번 더 돌아온다. 선장이 휴대기를 가리킨다. “그것도 여기에 적어 주세요. 제 무전기에는 연결하지 말고요.”',if:'voiceLeak'});
 N.classroomHall.lines=[{who:'',text:'복도에 문이 세 개 남아 있다. 이름표는 모두 떨어졌다. 왼쪽 문에서는 세 번씩 두드리는 소리가 나고, 가운데 문 아래에는 가느다란 틈이 있다. 오른쪽 문은 걸레로 막혀 있다.'},{who:'서진',text:'안에 누구 있어요?'},{who:'',text:'대답 대신 수신기의 통화 표시등이 켜진다. 스피커에 숨소리가 한 번 걸린다. 문을 두드리던 소리가 멎는다.'}];
 N.classroomHall.choices[0].puzzle='contactLocated';N.classroomHall.choices[0].label='반응을 확인한 문으로 간다';N.classroomHall.choices[1].label='두드리는 소리만 따라 왼쪽 문으로 간다';
@@ -136,6 +136,6 @@ const mount=root.mountGamePlay;root.mountGamePlay=K=>{mount(K);
  const resolve=K.resolveSubjective;K.resolveSubjective=(r,a)=>{if(a==='assist'){const q=K.subjective(r);if(!q||q.state!=='pending'||r.erosion<75)return false;const ok=resolve(r,'off');if(ok){r.erosion=Math.max(0,r.erosion-11);add(r,'assistedGrounding');}return ok;}return resolve(r,a);};
  const validate=root.validateContact;root.validateContact=r=>{validate(r);const q=r.puzzles?.departure;if(q&&(!q||typeof q!=='object'||['device','call','ground'].some(k=>typeof q[k]!=='boolean')||q&&[['nara',['rear','front']],['doyun',['rail','stairs']],['child',['family','separate']]].some(([k,v])=>q[k]!==null&&!v.includes(q[k]))))throw Error('출항 준비 기록이 올바르지 않습니다.');};
 };
-const endingText=D.endingText;D.endingText=r=>r.ending==='carry'&&r.flags.includes('selfSignalLeaked')?['배가 움직인다. 나래의 수신기는 꺼져 있다. 그런데 선장 무전기에서 네가 방금 한 말이 이어진다. 입을 막자 목 안쪽이 떨린다.','항구 스피커가 켜진다. 도착지 담당자가 무전기를 끄고 손짓하지만, 맞은편 정류장에도 같은 말이 뜬다. 신호가 남은 사람은 나래만이 아니었다.','차폐함은 네 자리 옆에 비어 있다. 시동을 끄고 함께 손을 확인할 시간도 있었다. 육지는 가까워지는데, 네 목소리가 먼저 건너간다.']:endingText(r);
-D.build='8.4.0-field';
+const endingText=D.endingText;D.endingText=r=>r.ending==='carry'&&r.flags.includes('selfSignalLeaked')?['배가 움직인다. 나래의 수신기는 꺼져 있다. 그런데 선장 무전기에서 내가 방금 한 말이 이어진다. 입을 막자 목 안쪽이 떨린다.','항구 스피커가 켜진다. 도착지 담당자가 무전기를 끄고 손짓하지만, 맞은편 정류장에도 같은 말이 뜬다. 신호가 남은 사람은 나래만이 아니었다.','차폐함은 내 자리 옆에 비어 있다. 시동을 끄고 함께 손을 확인할 시간도 있었다. 육지는 가까워지는데, 내 목소리가 먼저 건너간다.']:endingText(r);
+D.build='8.5.0-revision';
 })(globalThis);

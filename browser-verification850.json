@@ -1,0 +1,104 @@
+{
+  "build": "8.5.0-revision",
+  "date": "2026-10-20",
+  "method": "real headless Chromium UI actions using previously UI-exported checkpoints; no game flags or ending injection",
+  "endings": {
+    "1": {
+      "number": 1,
+      "title": "접수된 사람",
+      "image": "assets/ending-refuge.webp?v=8.5.0-revision"
+    },
+    "2": {
+      "number": 2,
+      "title": "대답한 이름",
+      "image": "assets/ending-shadow.webp?v=8.5.0-revision"
+    },
+    "3": {
+      "number": 3,
+      "title": "남겨 둔 자리",
+      "image": "assets/ending-sea.webp?v=8.5.0-revision"
+    },
+    "4": {
+      "number": 4,
+      "title": "방송이 닿지 않는 자리",
+      "image": "assets/ending-forest.webp?v=8.5.0-revision"
+    },
+    "5": {
+      "number": 5,
+      "title": "육지의 첫 방송",
+      "image": "assets/ending-outbreak.webp?v=8.5.0-revision"
+    },
+    "6": {
+      "number": 6,
+      "title": "남겨 둔 목소리",
+      "image": "assets/ending-relay.webp?v=8.5.0-revision"
+    },
+    "7": {
+      "number": 7,
+      "title": "서로 다른 목소리",
+      "image": "assets/ending-two-taps.webp?v=8.5.0-revision"
+    },
+    "8": {
+      "number": 8,
+      "title": "빈칸으로 남긴 일",
+      "image": "assets/ending-handoff.webp?v=8.5.0-revision"
+    },
+    "9": {
+      "number": 9,
+      "title": "불린 자리에 남은 것",
+      "image": "assets/ending-school.webp?v=8.5.0-revision"
+    },
+    "10": {
+      "number": 10,
+      "title": "받치지 못한 무게",
+      "image": "assets/ending-caught.webp?v=8.5.0-revision"
+    },
+    "11": {
+      "number": 11,
+      "title": "차오른 물",
+      "image": "assets/ending-water.webp?v=8.5.0-revision"
+    },
+    "12": {
+      "number": 12,
+      "title": "천 아래에는 출구가 없다",
+      "image": "assets/ending-market.webp?v=8.5.0-revision"
+    }
+  },
+  "checks": [
+    "existing crew roles and acknowledged handoff reused; one physical shielding action instead of five repeated inputs",
+    "last-decision retry retains finished paperwork and exposes the earned source route",
+    "source radio choices preserve DOM; wrong experiment, cable separation, correction, live answer and ending are real UI actions",
+    "new ending knowledge opens a distinct private-record choice at the actual previous decision",
+    "mobile Nara symptomatic image, optional two taps, explicit cable action, one-use actions, and real choice recovery",
+    "name ending has its own image; last-decision retry returns to the door",
+    "shelf choice causes an unbraced collapse consistent with prose and illustration",
+    "cloth trap choice happens while still trapped and has a closed fabric-space ending",
+    "rested Nara arrives at mainland intake in a distinct ending image",
+    "unrested shortcut explicitly replaces the separation plan and ends in mainland spread",
+    "water accumulation changes after each mistake and the third operation causes a physical flood",
+    "settings and ending layouts fit 320/390 mobile widths and 1440 desktop without horizontal overflow",
+    "no browser JavaScript errors in the tested paths",
+    "calendar trap uses the waiting room illustration and visible repeated date consequence",
+    "the speaker rather than the missing child is visibly registered in the school ending",
+    "leaving Nara has a pier departure illustration distinct from arriving together",
+    "ending archive replays the actual saved consequence",
+    "silent paper submission does not invent spoken dialogue in the actual browser",
+    "no browser JavaScript errors in the tested paths"
+  ],
+  "javascriptErrors": [],
+  "scope": "Chromium UI using previously UI-exported checkpoints, not a new human first run, not real iPhone audio or endurance testing",
+  "viewports": [
+    [
+      320,
+      568
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      1440,
+      900
+    ]
+  ]
+}

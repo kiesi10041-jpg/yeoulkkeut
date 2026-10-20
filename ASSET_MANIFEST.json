@@ -5,44 +5,19 @@
     "sha256": "5a379592c8073a71d4038a5ee657a26f2d62756d058dfaf92e91a0a37fe06c30"
   },
   {
-    "path": "assets/audio/archive.mp3",
-    "bytes": 840665,
-    "sha256": "1509d223a685597613d035495faa581a9cf89ee8756c61cebe0c1694fa21e405"
+    "path": "assets/audio/incantation.mp3",
+    "bytes": 262144,
+    "sha256": "1f09950937ad25b8ba43568710d7ff217294f8fcb30c46a9bfeb027f83f945c7"
   },
   {
-    "path": "assets/audio/coast.mp3",
-    "bytes": 840665,
-    "sha256": "2a5ffa78ba1d1d6919e83849810907725b1f161094b972e61d89b205456cfabf"
+    "path": "assets/audio/sanctuary.mp3",
+    "bytes": 1065117,
+    "sha256": "ac395563fe19f4050605fa42d288984be10811632a4dd5c12b94ff07409327fd"
   },
   {
-    "path": "assets/audio/dawn.mp3",
-    "bytes": 840665,
-    "sha256": "3e227e725712daba8e70a9bccc06985786d244bcf47b5f6385c13bcbdeaecbbb"
-  },
-  {
-    "path": "assets/audio/room.mp3",
-    "bytes": 840665,
-    "sha256": "b857ebd1ff3b83d0271348e3a7c176e520203826783e948f176725b8970d272c"
-  },
-  {
-    "path": "assets/audio/school.mp3",
-    "bytes": 840665,
-    "sha256": "0f46bd54a21f7fdc779c30522108219520dbb10647b9d2193d37d416273ed1da"
-  },
-  {
-    "path": "assets/audio/signal.mp3",
-    "bytes": 840665,
-    "sha256": "dd6937e7df52e14b25c82f90a6b0c73dc76166299b90e30d6525d234a957fa2f"
-  },
-  {
-    "path": "assets/audio/threat.mp3",
-    "bytes": 840665,
-    "sha256": "9852cf5360e6426cf69cf7d0a363c7a44c9272f237f0a04c1b44108e345d8b8b"
-  },
-  {
-    "path": "assets/audio/water.mp3",
-    "bytes": 840665,
-    "sha256": "0fb5bc3d3d9901da6610b0af6f384f763aec57bd52822075a312d5797a0f6935"
+    "path": "assets/audio/undertow.mp3",
+    "bytes": 1457162,
+    "sha256": "53fbe835a40a822fcb95eeb19870f0fdd724edabf80b0ad90a16495a2c819f99"
   },
   {
     "path": "assets/circuit-open.webp",
@@ -66,18 +41,23 @@
   },
   {
     "path": "assets/ending-caught.webp",
-    "bytes": 214862,
-    "sha256": "be935fb4e333114b374f5abe56682cbd9d8ba0c712619a7b53eeee9738132d1b"
+    "bytes": 91950,
+    "sha256": "c230b52d9250abf12e62dd12cc31ec39632dc63dc794ea31750d0a1f7508305b"
   },
   {
     "path": "assets/ending-forest.webp",
-    "bytes": 374532,
-    "sha256": "fece2f279c1604f92d50070d08793058026c88b87fead1e43a41602687f42246"
+    "bytes": 143718,
+    "sha256": "ed2d2e1596d64428d322850853e87d9528e81b2e84625363f80e73267d953e1c"
+  },
+  {
+    "path": "assets/ending-handoff.webp",
+    "bytes": 139466,
+    "sha256": "29ae24e30e63f146df0dbc6c62675b2637ba2099ac74c745c0f444b47bfc401f"
   },
   {
     "path": "assets/ending-market.webp",
-    "bytes": 293378,
-    "sha256": "cbe80feb634844c33cdd28ed5dad72ac2ab824447857be5166e0b2a94bbf61f9"
+    "bytes": 166716,
+    "sha256": "1e1d1cb0c838d9083ad34b375c401cf9dcb8f3b6eceba17e9b2bb9f4caa6c359"
   },
   {
     "path": "assets/ending-outbreak.webp",
@@ -86,28 +66,28 @@
   },
   {
     "path": "assets/ending-refuge.webp",
-    "bytes": 235174,
-    "sha256": "52254ee2c9d033d056ec3cbe1e3ebefca9e1f1165dae985b8655f01edd4bffba"
+    "bytes": 135112,
+    "sha256": "bdf197bd13985b47d319721daf0ae128b953570cae785a32bea3d9dd14785bb6"
   },
   {
     "path": "assets/ending-relay.webp",
-    "bytes": 337882,
-    "sha256": "7ce31768521634d93e908ee2eb99b2a5d1b4d77da2c899e312e0408479f2c5b5"
+    "bytes": 159730,
+    "sha256": "1d69d54d5dfc0f7a3967aa436a73f4b8f35e3f3f998e4813b6f9483e5f4a5b2d"
   },
   {
     "path": "assets/ending-school.webp",
-    "bytes": 255338,
-    "sha256": "8f2f36cbc0b7b854288a43c883332532ad6b63158faed29249a33af5e7459f1e"
+    "bytes": 148154,
+    "sha256": "5cbd1f4bfff3b1b3b44722324fbe4b56f1d562209ecea699497fc5625ab4bcb0"
   },
   {
     "path": "assets/ending-sea.webp",
-    "bytes": 260368,
-    "sha256": "917c253d77862d034e243a749f37663bcd0c385ce6fbe672847b8ae114472643"
+    "bytes": 156664,
+    "sha256": "5d9c9c0489dafc3db04758ccea101440c8e4828a5fd8742fcc295be16e61a324"
   },
   {
     "path": "assets/ending-shadow.webp",
-    "bytes": 214862,
-    "sha256": "be935fb4e333114b374f5abe56682cbd9d8ba0c712619a7b53eeee9738132d1b"
+    "bytes": 131624,
+    "sha256": "2a216318cace28e7125136b62becb2a6449204b1b6ed18048105b1fd9b549b2d"
   },
   {
     "path": "assets/ending-together.webp",
@@ -121,8 +101,8 @@
   },
   {
     "path": "assets/ending-water.webp",
-    "bytes": 327314,
-    "sha256": "1c465dd67532a3bce78f997fcc4a99aa140b653e4e36b36779d3c1d66facd19a"
+    "bytes": 182360,
+    "sha256": "02463fab7794a5817529630403752bf9453e133e5f9cda97370eede276d61beb"
   },
   {
     "path": "assets/erosion-growth.webp",
@@ -173,6 +153,11 @@
     "path": "assets/message-terminal.webp",
     "bytes": 184206,
     "sha256": "e055d04f2ce3c71bf70f8776629c01ad567746cac0dfd3ff80fd7a7d2dc3b837"
+  },
+  {
+    "path": "assets/nara-affected.webp",
+    "bytes": 190684,
+    "sha256": "897622e8298d2f30bdd1b3fbb072cf4d2709ef755c1752638c5cbd8859503d0e"
   },
   {
     "path": "assets/nara-scene.webp",

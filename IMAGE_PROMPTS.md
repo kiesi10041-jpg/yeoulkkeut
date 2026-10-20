@@ -104,3 +104,24 @@ Built-in image generation, realistic painterly Korean coastal horror, no embedde
 - `assets/circuit-open.webp`: open old cabinet, upper/lower levers, blank brass plates, crossed cloth wiring, emergency lamp upper right and microphone unit lower right. Hardware detail is atmosphere; exact traced endpoint evidence is supplied by the inspected wire readout.
 
 Source resolution 1536×1024, distributed WebP 1440×960 quality 84. Generation source PNGs are not part of the game package.
+
+
+## v8.5.0 — 직접 플레이 검토 뒤 교체한 최종 자산
+
+공통: 한국 해안 마을의 사실적인 회화풍 공포, 1536×1024 가로 구도, 읽어야 하는 문자와 UI를 그림에 합성하지 않음. 주인공은 1인칭 손·시점으로 처리. 나래와 도윤은 기존 인물 자산을 참조해 정체성을 유지. 게임용 최종본은 WebP로 변환.
+
+| 자산 | 최종 장면 |
+|---|---|
+| ending-refuge.webp | 반복된 대합실 문·겹친 달력, 옆에 앉은 나래, 주인공 손의 표 |
+| ending-shadow.webp | 문 아래의 종이, 흐린 유리 너머 같은 형상 두 개, 이름·목소리의 분리 |
+| ending-sea.webp | 구조선의 1인칭 시점, 부두에 남겨진 나래와 벌어지는 거리 |
+| ending-forest.webp | 기존 파일명을 유지하되 숲 그림을 폐기. 부두 계단에서 나래와 다음 배를 기다림 |
+| ending-relay.webp | 해안 입력함, 호출과 공용 출력의 분리, 기록을 들고 함께 있는 나래 |
+| ending-handoff.webp | 육지 구조 접수대, 빈 기록 항목을 가리키는 담당자와 나래, 주인공의 서류 |
+| ending-school.webp | 학교 명부 형체·종, 시점을 향한 빈 의자와 표, 문턱의 주인공 손 |
+| ending-caught.webp | 양호실 문을 막은 선반과 통, 다친 왼손의 도윤, 받침에 닿지 않은 의자 |
+| ending-water.webp | 펌프실 계단의 역류·누수, 떠다니는 수신기, 도윤을 끌어올리는 주인공 |
+| ending-market.webp | 작은 천막 안에서 불가능하게 겹치는 천의 매듭과 주름, 닫히는 좁은 빛 틈 |
+| nara-affected.webp | 기존 나래 얼굴·짧은 머리·회색 겉옷, 가슴 앞으로 든 손목의 검은 분기선, 초점이 흐린 시선, 허리 위 투명 인물 |
+
+시장 결말은 최초 출력의 일반 시장 거리 구도를 폐기하고, 벽이 바로 붙은 젖은 천 내부로 다시 편집했습니다. 나래 증상 그림은 전신의 작은 손목 표시 대신 허리 위 구도로 수정했습니다. 정체성·의복·사건 대상과 모바일 식별성을 기준으로 최종본을 선택했습니다. 5번과 7번의 기존 그림은 유지했습니다.

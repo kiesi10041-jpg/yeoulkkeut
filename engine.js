@@ -1,6 +1,6 @@
 (function(root){
-if(typeof module!=='undefined'){require('./story.js');require('./campaign.js');require('./world.js');require('./play-experience.js');require('./continuity.js');require('./receiver-interference.js');require('./decisions.js');require('./release.js');require('./play-loop.js');}
-const D=root.YKData,W=root.YKWorld,BUILD='8.4.0-field';
+if(typeof module!=='undefined'){require('./story.js');require('./campaign.js');require('./world.js');require('./play-experience.js');require('./continuity.js');require('./receiver-interference.js');require('./decisions.js');require('./release.js');require('./play-loop.js');require('./revision.js');}
+const D=root.YKData,W=root.YKWorld,BUILD='8.5.0-revision';
 const emptyMeta=()=>({version:610,ends:[],knowledge:[],seen:[],preferences:{sound:true,interferenceSound:true,vibration:false,music:30,effects:55,musicMode:'continuous',reduce:false,large:false}});
 const fresh=()=>({version:610,contentBuild:BUILD,place:'shelter',visitedPlaces:['shelter'],worldNotes:[],talked:[],travelLog:[],journey:null,explore:null,puzzles:{},node:'arrival',chapterTitle:'01 · 문이 열리기 전',page:0,erosion:0,flags:[],asked:[],chat:[],trail:[],ending:null});
 const clone=x=>JSON.parse(JSON.stringify(x));

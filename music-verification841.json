@@ -1,0 +1,65 @@
+{
+  "build": "8.4.1-mix",
+  "method": "headless Chromium, mobile viewport 390x844; no physical iPhone or subjective listening verification",
+  "checks": [
+    "exploration uses Sanctuary",
+    "audio time advances after gesture",
+    "exploration loops",
+    "Web Audio gain controls music",
+    "same exploration score continues across locations",
+    "threat cue plays once",
+    "ending uses Undertow once",
+    "last visible ending paragraph raises music gently",
+    "zero music setting mutes gain",
+    "music off creates no new track",
+    "stop clears tracks and identity"
+  ],
+  "context": "running",
+  "tracks": 0,
+  "errors": [],
+  "loop_boundary_sample_step": 0.0009867222979664803,
+  "decode_checks": [
+    {
+      "file": "assets/audio/undertow.mp3",
+      "decoded_seconds": 104.0,
+      "sample_peak": 0.651780366897583,
+      "bytes": 1457162
+    },
+    {
+      "file": "assets/audio/sanctuary.mp3",
+      "decoded_seconds": 76.0,
+      "sample_peak": 0.6701771020889282,
+      "bytes": 1065117
+    },
+    {
+      "file": "assets/audio/incantation.mp3",
+      "decoded_seconds": 18.69167800453515,
+      "sample_peak": 0.4252914488315582,
+      "bytes": 262144
+    }
+  ],
+  "audio_measurements": [
+    {
+      "file": "assets/audio/undertow.mp3",
+      "seconds": 104.045714,
+      "LUFS": "-21.73",
+      "true_peak_dBTP": "-3.71",
+      "bytes": 1457162
+    },
+    {
+      "file": "assets/audio/sanctuary.mp3",
+      "seconds": 76.042449,
+      "LUFS": "-21.44",
+      "true_peak_dBTP": "-3.48",
+      "bytes": 1065117
+    },
+    {
+      "file": "assets/audio/incantation.mp3",
+      "seconds": 24.032653,
+      "LUFS": "-24.08",
+      "true_peak_dBTP": "-7.42",
+      "bytes": 336982
+    }
+  ],
+  "narration_passages_corrected": 13
+}
